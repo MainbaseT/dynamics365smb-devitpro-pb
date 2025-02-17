@@ -5,6 +5,7 @@ ms.date: 05/19/2021
 ms.topic: conceptual
 author: jswymer
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 
 # Supported cipher suites in outgoing calls
@@ -30,7 +31,7 @@ A cipher suite is used to help secure web service calls made from the [!INCLUDE[
 |TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384|TLS|ECDHE|RSA|AES_256_CBC|SHA384|
 |TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256|TLS|ECDHE|RSA|AES_128_CBC|SHA256|
 
-## See Also
+## Related information
 
 [Call external services with the HttpClient data type](devenv-httpclient.md)  
 [HttpClient Data Type](methods-auto/httpclient/httpclient-data-type.md)  

@@ -9,6 +9,7 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # customerPayment resource type
@@ -86,7 +87,7 @@ Here is a JSON representation of the customerPayment resource.
 ```
 <!-- IMPORTANT: END>DO_NOT_EDIT -->
 
-## See Also
+## Related information
 [GET customerPayment](../api/dynamics_customerpayment_get.md)
 [DELETE customerPayment](../api/dynamics_customerpayment_delete.md)
 [POST customerPayment](../api/dynamics_customerpayment_create.md)

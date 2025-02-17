@@ -7,6 +7,7 @@ ms.devlang: al
 ms.search.keywords: administration, tenant, admin, environment, sandbox, telemetry
 ms.date: 12/29/2023
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 # Analyze an app key vault secret trace telemetry
 
@@ -251,7 +252,7 @@ traces
 [!INCLUDE[telemetry_alert_learn_more](../includes/telemetry-alerting.md)]
 
 
-## See also
+## Related information
 
 [App Key Vaults with [!INCLUDE[prod_short](../developer/includes/prod_short.md)] Extensions](../developer/devenv-app-key-vault.md)  
 [Monitoring and Analyzing Telemetry](telemetry-overview.md)  

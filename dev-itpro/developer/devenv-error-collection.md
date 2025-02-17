@@ -6,6 +6,7 @@ ms.date: 01/04/2024
 ms.topic: conceptual
 author: jswymer
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 
 # Collecting Errors
@@ -146,7 +147,7 @@ codeunit 50100 DoPost
 }
 ```
 
-## See Also  
+## Related information  
 
 [Failure modeling and robust coding practices](devenv-robust-coding-practices.md)  
 [AL error handling](devenv-al-error-handling.md)   

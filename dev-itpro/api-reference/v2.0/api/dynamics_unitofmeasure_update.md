@@ -4,8 +4,9 @@ description: Updates a unitOfMeasure object in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Update unitsOfMeasure
@@ -71,7 +72,7 @@ Content-type: application/json
 ```
 
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)    
 [unitofmeasure](../resources/dynamics_unitofmeasure.md)    
 [Get unitofmeasure](dynamics_unitofmeasure_Get.md)    

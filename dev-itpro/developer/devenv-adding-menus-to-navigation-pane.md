@@ -5,6 +5,7 @@ author: jswymer
 ms.date: 08/08/2022
 ms.topic: conceptual
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 # Adding Menus to the Navigation and Actions Area
 
@@ -156,7 +157,7 @@ addlast(Reporting)
 ```
   
 
-## See Also
+## Related information
 [AL Development Environment](devenv-reference-overview.md)  
 [Page Extension Object](devenv-page-ext-object.md)  
 [Actions Overview](devenv-actions-overview.md)  

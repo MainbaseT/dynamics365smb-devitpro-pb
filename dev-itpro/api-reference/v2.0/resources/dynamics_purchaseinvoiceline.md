@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # purchaseInvoiceLine resource type
@@ -115,7 +116,7 @@ Here is a JSON representation of the purchaseInvoiceLine resource.
 
 
 
-## See Also
+## Related information
 [GET purchaseInvoiceLine](../api/dynamics_purchaseInvoiceLine_Get.md)  
 [DELETE purchaseInvoiceLine](../api/dynamics_purchaseInvoiceLine_Delete.md)  
 [POST purchaseInvoiceLine](../api/dynamics_purchaseInvoiceLine_Create.md)  

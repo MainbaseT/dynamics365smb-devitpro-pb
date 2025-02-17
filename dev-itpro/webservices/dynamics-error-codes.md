@@ -6,6 +6,7 @@ ms.topic: article
 ms.devlang: al
 ms.date: 02/06/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Troubleshooting REST API/OData calls
@@ -111,7 +112,7 @@ This article is covered in the general troubleshooting guide for web services. F
 This article is covered in the general troubleshooting guide for web services. For more information, see [It works in my sandbox but not in production](web-service-troubleshooting.md#it-works-in-my-sandbox-but-not-in-production).
 
 
-## See also
+## Related information
 
 <!-- [Explore REST APIs with Postman](../developer/devenv-develop-connect-apps.md#explore-rest-apis-with-postman-and-microsoft-entra-authentication) -->
 [Troubleshoot web service errors](web-service-troubleshooting.md)  

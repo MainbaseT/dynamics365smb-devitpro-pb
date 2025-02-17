@@ -6,6 +6,7 @@ ms.custom: evergreen
 ms.date: 04/17/2024
 ms.topic: conceptual
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Control add-in object
@@ -172,12 +173,12 @@ $.ajax({
      xhrFields: {
           withCredentials: true
     }
-)).done(function(data) {
+}).done(function(data) {
     $("#controlAddIn").text(data);
 });
 ```
 
-## See also
+## Related information
 
 [AL development environment](devenv-reference-overview.md)  
 [Developing extensions](devenv-dev-overview.md)  

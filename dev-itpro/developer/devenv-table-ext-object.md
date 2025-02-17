@@ -5,6 +5,7 @@ author: SusanneWindfeldPedersen
 ms.date: 04/17/2024
 ms.topic: conceptual
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Table extension object
@@ -94,7 +95,7 @@ tableextension 50115 RetailWinterSportsStore extends Customer
 }
 ```
 
-## See also
+## Related information
 
 [AL development environment](devenv-reference-overview.md)  
 [Table overview](devenv-tables-overview.md)  

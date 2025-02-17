@@ -2,11 +2,11 @@
 title: Endpoints for the APIs for Microsoft Dynamics 365 Business Central
 description: Describes the steps you must go through to enable access to the APIs in on-prem and cloud product versions.
 author: SusanneWindfeldPedersen
-ms.custom: na
-ms.date: 01/08/2024
+ms.custom: conceptual
+ms.date: 11/13/2024
 ms.topic: article
-ms.assetid: a0ac492d-e3c8-4a76-87b4-b469e08c58e7
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Endpoints for the APIs for Dynamics 365 Business Central On-Premises and Online
@@ -53,7 +53,7 @@ When you exchange data through the API, you might have to safelist the IP addres
 For more information, see [FAQ: IP addresses or ranges for the Business Central service](../../faq.yml#which-ip-addresses-or-ranges-does-my-environment-s-api-use)
 
 
-## See Also
+## Related information
 
 [Developing Connect apps for Dynamics 365 Business Central](../../developer/devenv-develop-connect-apps.md)  
 [Microsoft web services overview](../../webservices/web-services.md)  

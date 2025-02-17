@@ -5,6 +5,7 @@ author: SusanneWindfeldPedersen
 ms.date: 03/19/2024
 ms.topic: conceptual
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Pragma Warning directive in AL
@@ -52,7 +53,7 @@ table 50110 MyTable
 }
 ```
 
-## See also
+## Related information
 
 [Development in AL](../devenv-dev-overview.md)  
 [AL development environment](../devenv-reference-overview.md)  

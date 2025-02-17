@@ -4,7 +4,7 @@ description: Describes the XMLport object in AL, which is composed of a schema, 
 author: blrobl
 ms.custom: evergreen
 ms.date: 04/18/2024
-ms.reviewer: solsen
+ms.reviewer: jswymer
 ms.topic: overview
 ms.author: brobledodiaz
 ---
@@ -40,7 +40,7 @@ When you design XMLports, you must set the value of the [Format property (XMLpor
 
 For more information about data consistency and validation against possible errors when using XMLports, see the blog post [Importing and exporting valid data using XMLports in Dynamics 365 Business Central](https://cloudblogs.microsoft.com/dynamics365/it/2019/05/22/importing-and-exporting-valid-data-using-xmlports-in-dynamics-365-business-central/).
 
-## See also
+## Related information
 
 [XMLport object](devenv-xmlport-object.md)  
 [Defining an XMLport schema](devenv-xmlport-schema.md)  

@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # salesOrderLine resource type
@@ -123,7 +124,7 @@ Here is a JSON representation of the salesOrderLine resource.
 
 
 
-## See Also
+## Related information
 [GET salesOrderLine](../api/dynamics_salesOrderLine_Get.md)  
 [DELETE salesOrderLine](../api/dynamics_salesOrderLine_Delete.md)  
 [POST salesOrderLine](../api/dynamics_salesOrderLine_Create.md)  

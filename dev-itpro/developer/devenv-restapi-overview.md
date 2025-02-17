@@ -5,6 +5,7 @@ author: SusanneWindfeldPedersen
 ms.date: 03/19/2024
 ms.topic: overview
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # HTTP, JSON, TextBuilder, and XML API overview
@@ -41,7 +42,7 @@ AL has a number of data types available for accessing services. The following ta
 |[XmlText](methods-auto/xmltext/xmltext-data-type.md)|Represents the text content of an element or attribute.|
 
 
-## See Also
+## Related information
 
 [Developing extensions](devenv-dev-overview.md)  
 [Get started with AL](devenv-get-started.md)  

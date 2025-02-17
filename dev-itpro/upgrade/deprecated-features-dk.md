@@ -5,10 +5,10 @@ author: bholtorf
 
 ms.topic: conceptual
 ms.devlang: al
-ms. search.keywords: deprecated, Denmark, local functionality
+ms.search.keywords: deprecated, Denmark, local functionality
 ms.date: 04/01/2021
 ms.author: jswymer
-
+ms.reviewer: jswymer
 ---
 
 # Deprecated Features in the Danish Version of [!INCLUDE [prod_long](../developer/includes/prod_long.md)]
@@ -19,7 +19,7 @@ This topic lists and describes the local functionality for Denmark that has been
 
 [!INCLUDE [fields-obsolete-dk](../includes/fields-obsolete-dk.md)]
 
-## See Also
+## Related information
 
 [Deprecated Features in the Base App](deprecated-features-w1.md)  
 [Deprecated Features in the Platform - Clients, Server, and Database](deprecated-features-platform.md)  

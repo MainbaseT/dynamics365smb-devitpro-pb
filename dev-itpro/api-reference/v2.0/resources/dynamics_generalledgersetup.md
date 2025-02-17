@@ -9,6 +9,7 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # generalLedgerSetup resource type
@@ -60,5 +61,5 @@ Here is a JSON representation of the generalLedgerSetup resource.
 ```
 <!-- IMPORTANT: END>DO_NOT_EDIT -->
 
-## See Also
+## Related information
 [GET generalLedgerSetup](../api/dynamics_generalledgersetup_get.md)

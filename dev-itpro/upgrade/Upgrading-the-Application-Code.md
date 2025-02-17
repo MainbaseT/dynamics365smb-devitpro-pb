@@ -6,6 +6,7 @@ ms.date: 04/18/2024
 ms.topic: conceptual
 ms.author: jswymer
 author: jswymer
+ms.reviewer: jswymer
 ---
 # Upgrading the Application Code in [!INCLUDE[prod_long](../developer/includes/prod_long.md)]
 
@@ -417,6 +418,6 @@ For information about importing objects, see [Importing Objects](../cside/cside-
     Publish-NAVApp -ServerInstance <ServerInstanceName> -Path <ExtensionFileName> 
     ```
 
-## See Also  
+## Related information  
 [Upgrading the Data](Upgrading-the-Data.md)   
 [Upgrading to Business Central](upgrading-to-business-central.md)

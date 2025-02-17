@@ -4,7 +4,7 @@ description: "Describes how to upgrade apps available on AppSource that are alre
 author: SusanneWindfeldPedersen
 
 ms.date: 08/19/2021
-ms.reviewer: solsen
+ms.reviewer: jswymer
 ms.topic: conceptual
 ms.author: freddyk
 ---
@@ -26,7 +26,7 @@ Follow the steps below to update a tenant to the latest version of any AppSource
 > [!NOTE]  
 > An alternative, is to use the Admin Center, where you can also manage the upgrade, given that you have the right permissions. For more information, see [Managing Apps](../administration/tenant-admin-center-manage-apps.md).
 
-## See Also  
+## Related information  
 
 [Developing Extensions](devenv-dev-overview.md)  
 [Get Started with AL](devenv-get-started.md)  

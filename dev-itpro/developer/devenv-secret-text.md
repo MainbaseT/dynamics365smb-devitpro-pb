@@ -7,6 +7,7 @@ ms.custom: bap-template
 ms.date: 12/20/2023
 
 ms.topic: conceptual
+ms.reviewer: jswymer
 ---
 
 # Protecting sensitive values with the SecretText data type
@@ -189,7 +190,7 @@ begin
 end;
 ```
 
-## See also
+## Related information
 
 [SecretText data type](methods-auto/secrettext/secrettext-data-type.md)  
 [NonDebuggable Attribute](methods/devenv-nondebuggable-attribute.md)  

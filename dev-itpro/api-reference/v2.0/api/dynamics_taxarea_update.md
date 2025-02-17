@@ -4,8 +4,9 @@ description: Updates a tax areas object in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Update taxAreas
@@ -70,7 +71,7 @@ Content-type: application/json
 }
 ```
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)    
 [taxarea](../resources/dynamics_taxarea.md)    
 [Get taxarea](dynamics_taxarea_Get.md)    

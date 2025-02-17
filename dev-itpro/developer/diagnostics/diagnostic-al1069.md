@@ -2,10 +2,10 @@
 title: "Compiler Error AL1069"
 description: "Duplicate package dependency with application ID '{0}', and name '{1}'."
 ms.author: solsen
-ms.date: 03/11/2024
-ms.tgt_pltfrm: na
+ms.date: 05/14/2024
 ms.topic: reference
 author: SusanneWindfeldPedersen
+ms.reviewer: solsen
 ---
 [//]: # (START>DO_NOT_EDIT)
 [//]: # (IMPORTANT:Do not edit any of the content between here and the END>DO_NOT_EDIT.)
@@ -21,6 +21,6 @@ Duplicate package dependency with application ID '{0}', and name '{1}'. Remove d
 Multiple package dependencies with the same application ID and name have been defined.  
 
 [//]: # (IMPORTANT: END>DO_NOT_EDIT)
-## See Also  
+## Related information  
 [Get Started with AL](../devenv-get-started.md)  
 [Developing Extensions](../devenv-dev-overview.md)  

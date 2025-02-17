@@ -5,6 +5,7 @@ author: SusanneWindfeldPedersen
 ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Adding data for Extensions
@@ -121,7 +122,7 @@ The data must be exported into files to be included in the extension. To use the
 
 3. Add the exported custom report files to the Visual Studio Code project that contains your extension.
 
-## See Also
+## Related information
 
 [Developing Extensions in AL](devenv-dev-overview.md)  
 [Converting Extensions V1 to Extensions V2](devenv-upgrade-v1-to-v2-overview.md)  

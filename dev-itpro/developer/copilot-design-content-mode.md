@@ -1,6 +1,6 @@
 ---
 title: Design content mode of prompt dialog page
-description: Learn how to define the screen of a copilot prompt dialog page that displays the AI-generated output.
+description: Learn how to define the screen of a Copilot prompt dialog page that displays the AI-generated output.
 author: jswymer
 ms.author: jswymer
 ms.reviewer: jswymer
@@ -8,19 +8,19 @@ ms.topic: how-to
 ms.collection:
   - get-started
   - bap-ai-copilot
-ms.date: 02/17/2024
+ms.date: 11/14/2024
 ms.custom: bap-template 
 ---
 
 # Design content mode of prompt dialog page
 
-In this article, you learn how to define the Copilot screen that displays the AI-generated output. The screen is defined by the content mode of the PromptDialog page. It enables users to review output, then choose to regenerate, save, or discard it. The following figure illustrates an example of the content mode for a copilot.
+In this article, you learn how to define the Copilot screen that displays the AI-generated output. The screen is defined by the content mode of the PromptDialog page. It enables users to review output, then choose to regenerate, save, or discard it. The following figure illustrates an example of the content mode for a Copilot extension.
 
 ![Shows a screenshot of the content mode of the PromptDialog type page](media/promptdialog-content-mode.svg)
 
 If the PromptDialog page has a prompt area (`area(Prompt)`), then an edit prompt ![Shows the prompt edit icon](media/prompt-edit.png) button appears in the upper-left corner of the page when it's in the content mode. Users can select the edit prompt button to open the [prompt mode](copilot-design-prompt-mode.md) where they can provide new input or modify input. The content mode UI consists of several other elements, which are described in the sections that follow.
 
-For an overview building the copilot UI, refer to [Build copilot user experience](ai-build-experience.md).
+For an overview building the Copilot UI, refer to [Build Copilot user experience](ai-build-experience.md).
 
 ## Prerequisites
 
@@ -66,12 +66,12 @@ There are two system actions that control the behavior: `systemaction(OK)` for s
             systemaction(OK)
             {
                 Caption = 'Save';
-                ToolTip = 'Save the proposal.';
+                ToolTip = 'Save the draft.';
              }
             systemaction(Cancel)
             {
                 Caption = 'Cancel';
-                ToolTip = 'Throw away the proposal.';
+                ToolTip = 'Throw away the draft.';
             }
         }
     }
@@ -130,9 +130,9 @@ A useful pattern for the caption is to use the prompt input that was provided be
 The following code adds the `DataCaptionExpression` property to our example to set the caption to the text the user provides in the prompt area:
 
 ```al
-page 50100 "My copilot"
+page 50100 "My Prompt Dialog"
 {
-    Caption = 'Draft with my copilot';
+    Caption = 'Draft a proposal';
     PageType = PromptDialog;
     Extensible = false;
     PromptMode = Prompt;
@@ -144,18 +144,18 @@ page 50100 "My copilot"
 
 ## Enable proposal history capability
 
-A user might get more than one generated output when using copilot. This situation can happen when copilot provides several versions of an output from start, or when the user chooses to regenerate the output. It can be beneficial to provide users with a way to scroll back and forth through a history of the different proposals. To accommodate this capability, you can set up a version carousel at the top of the PromptDialog page.
+A user might get more than one generated output when using the Copilot feature. This situation can happen when Copilot provides several versions of an output from start, or when the user chooses to regenerate the output. It can be beneficial to provide users with a way to scroll back and forth through a history of the different proposals. To accommodate this capability, you can set up a version carousel at the top of the PromptDialog page.
 
 [![Shows the version control in content mode of the PromptDialog type page](media/promptdialog-content-mode-versions.svg)](media/promptdialog-content-mode-versions.svg#lightbox)
 
-This capability requires that the PromptDialog page uses a temporary source table. Unlike with other page types, each record of the source table represents an instance of a copilot proposal. It can include both user inputs and the AI-generated results.
+This capability requires that the PromptDialog page uses a temporary source table. Unlike with other page types, each record of the source table represents an instance of a Copilot proposal. It can include both user inputs and the AI-generated results.
 
-You should design the capability to insert a new record each time content is generated. When in place, the control appears on the PromptDialog page whenever the source table contains multiple records. After the user closes the copilot, for example by saving or discarding the results, the version history is deleted.
+You should design the capability to insert a new record each time content is generated. When in place, the control appears on the PromptDialog page whenever the source table contains multiple records. After the user closes Copilot, for example by saving or discarding the results, the version history is deleted.
 
 ```al
-page 50100 "My copilot"
+page 50100 "My Prompt Dialog"
 {
-    Caption = 'Draft with copilot';
+    Caption = 'Draft a proposal';
     PageType = PromptDialog;
     Extensible = false;
     PromptMode = Prompt;
@@ -171,4 +171,4 @@ page 50100 "My copilot"
 
 - [Design copilot prompt mode](copilot-design-prompt-mode.md)
 - [Customize copilot generate mode](copilot-customize-generate-mode.md)
-- [Launch copilot](copilot-launch-experience.md)
+- [Launch Copilot prompt dialog page](devenv-page-prompting-floating-actionbar.md)

@@ -3,7 +3,7 @@ title: Technical validation checklist
 description: Describes the steps you must go through to successfully submit your app to AppSource using AppSourceCop for Business Central.
 author: SusanneWindfeldPedersen
 ms.date: 03/04/2024
-ms.reviewer: solsen
+ms.reviewer: jswymer
 ms.topic: conceptual
 ms.author: freddyk
 ---
@@ -195,7 +195,7 @@ In this case, you can create a version 1.0.0.1 of your extension and submit it w
 
 -->
 
-## See Also
+## Related information
 
 [Developing [!INCLUDE[d365al_ext_md](../includes/d365al_ext_md.md)]s](devenv-dev-overview.md)
 [Analyzing AppSource Submission Validation Telemetry](../administration/telemetry-appsource-submission-validation-trace.md)

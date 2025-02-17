@@ -5,7 +5,7 @@ author: jswymer
 ms.author: jswymer
 ms.reviewer: jswymer
 ms.topic: conceptual
-ms.date: 01/16/2024
+ms.date: 10/01/2024
 ms.custom: bap-template
 ms.collection: get-started
 ---
@@ -86,6 +86,9 @@ Fields on nonlist type pages, such as card and document type pages, include Desi
 |**Show always**|Sets the field to always display on the page. The field is displayed regardless the user selects **Show more** or **Show less**. The field doesn't show in the FastTab heading if the FastTab is collapsed.|Standard|
 |**Show when collapsed**|Sets the field to always display on the page. The field is displayed regardless the user selects **Show more** or **Show less**. The fields also display in the header of the FastTab if the FastTab is collapsed.|Promoted|
 
+> [!NOTE]
+> In version 24 (runtime 14) and earlier, the `Importance` property is ignored on `StandardDialog` and `ConfirmationDialog` page types. This behavior means that a field can't be hidden under the **Show more** action even if the user tries to do so using personalization or designer. However, starting in version 25 (runtime 15), the property is fully respected in the client so it behaves the same as it does on any other page type. As a result, after upgrading to version 25, users might have a slightly different experience on some `StandardDialog` and `ConfirmationDialog` page types.
+
 ## Set the Quick Entry on fields
 
 You can use Designer to set the [QuickEntry property](properties/devenv-quickentry-property.md) on a field. The **QuickEntry** property determines whether the field is skipped when users select the <kbd>Enter</kbd> key to navigate through fields on a page. You use Quick Entry to speed up the data entry by keyboard and to focus only on the frequently used fields.
@@ -154,7 +157,7 @@ The display type icons let you preview the changes you made on desktop, tablet, 
 
 ## Control user access to Designer
 
-Accessing Designer is controlled on a user or user group basis by the **EXTEN. MGT. - ADMIN** permission set. If a user is assigned this permission set, then Designer is available for the user in the client. To prohibit a user from Use Designer, just remove the user from the **EXTEND. MGT. - ADMIN** permission set.
+Accessing Designer is controlled on a user or user group basis by the **EXTEN. MGT. - ADMIN** permission set. If a user is assigned this permission set, then Designer is available for the user in the client. To prohibit a user from Use Designer, just remove the user from the **EXTEN. MGT. - ADMIN** permission set.
 
 > [!NOTE]  
 > It's important that the **EXTEN. MGT. - ADMIN** permission set does not have a *company* specified; otherwise the user won't be able to access Designer.
@@ -173,7 +176,7 @@ Accessing Designer is controlled on a user or user group basis by the **EXTEN. M
    > [!TIP]
    > You can hide the **Automation** item from users, but not Use Designer. Learn more at [Set Up Power Automate Integration](../powerplatform/power-automate-setup.md).
 
-## See also
+## Related information
 
 [Developing Extensions](devenv-dev-overview.md)  
 [Get Started with AL](devenv-get-started.md)  

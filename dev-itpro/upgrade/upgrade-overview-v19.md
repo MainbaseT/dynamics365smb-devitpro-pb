@@ -6,6 +6,7 @@ ms.date: 04/18/2024
 ms.topic: overview
 ms.author: jswymer
 author: jswymer
+ms.reviewer: jswymer
 ---
 # Upgrading to [!INCLUDE[prod_long](../developer/includes/prod_long.md)] 2021 Release Wave 2
 
@@ -55,7 +56,7 @@ Before you upgrade, review the following articles to get an overview of features
 For information about migrating an on-premises solution to online, see [Migrate to Business Central Online from Business Central On-premises](/dynamics365/business-central/dev-itpro/administration/migrate-business-central-on-premises).
 
 
-## See Also  
+## Related information  
  
 [Upgrading to Business Central](upgrading-to-business-central.md)  
 [Upgrading Extensions](../developer/devenv-upgrading-extensions.md)  

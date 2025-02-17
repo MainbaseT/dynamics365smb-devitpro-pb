@@ -5,6 +5,7 @@ author: jswymer
 ms.author: solsen
 ms.date: 11/11/2021
 ms.topic: conceptual
+ms.reviewer: solsen
 ---
 
 # Events in AL
@@ -63,7 +64,7 @@ Implementing events consists of the following tasks:
     At the consumer end, add one or more subscriber methods that subscribe to published events when they are raised. For more information, see [Subscribing to Events](devenv-subscribing-to-events.md).  
 
 
-## See Also
+## Related information
 
 [Publishing Events](devenv-publishing-events.md)  
 [Raising Events](devenv-raising-events.md)  

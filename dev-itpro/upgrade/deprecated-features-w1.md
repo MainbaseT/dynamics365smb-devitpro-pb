@@ -3,8 +3,8 @@ title: Deprecated Features in the Base App
 description: Describes the features that have been moved, removed, or replaced in the W1 version.
 author: brentholtorf
 ms.author: bholtorf
-ms.date: 03/26/2024
-ms.reviewer: jswymer
+ms.date: 12/11/2024
+ms.reviewer: bholtorf
 ms.topic: conceptual
 ms.custom: bap-template
 ---
@@ -21,12 +21,66 @@ This article describes the features that have been moved, removed, or replaced i
 
 The following features will be removed in 2026 release wave 1.
 
-### API (v1.0) for Business Central (removed)
+### API (v1.0) for Business Central
 
 |Moved, Removed, or Replaced? |    Why?|
 |-----------------------------|-----|
-|Replaced| With [!INCLUDE[prod_short](../includes/prod_short.md)] you can create Connect apps. Connect apps establish a point-to-point connection between [!INCLUDE[prod_short](../includes/prod_short.md)] and a 3rd party solution or service using the standard REST API to interchange data. <br><br>In 2020 release wave 2 we introduced a new improved API where all complex properties are replaced with first-level properties or navigation properties. This change significantly improves API performance, as complex fields were previously calculated at runtime. In API v2.0, all multipart keys and non-GUID keys are replaced with unique GUID keys, and entities can be retrieved using the SystemId, which is immutable, platform-enforced, and indexed. This change improves auditing and API reading performance.<br><br>The API (v1.0) will be removed in 2026 release wave 1.<br><br>The API v2.0 contains all the functionality from API v1.0, so migration should be possible. If this isn't the case, reach out to us via [https://github.com/microsoft/ALAppExtensions](https://github.com/microsoft/ALAppExtensions).<br><br>To learn about the replacement feature, go to [Transitioning from API v1.0 to API v2.0](../api-reference/v2.0/transition-to-api-v2.0.md). |
+|Replaced| With [!INCLUDE [prod_short](../developer/includes/prod_short.md)], you can create Connect apps. Connect apps establish a point-to-point connection between [!INCLUDE [prod_short](../developer/includes/prod_short.md)] and third-party solutions or services using the standard REST API to interchange data. </br></br>In 2020 release wave 2, we introduced an improved API where all complex properties are replaced with first-level properties or navigation properties. This change significantly improves API performance because the complex fields were previously calculated at runtime. In API v2.0, all multipart keys and non-GUID keys are replaced with unique GUID keys. Entities can be retrieved using the SystemId, which is immutable, platform-enforced, and indexed. This change improves auditing and API reading performance.</br></br>The API v2.0 contains all the functionality from API v1.0, so migration should be possible. If this isn't the case, reach out to us via [https://github.com/microsoft/ALAppExtensions](https://github.com/microsoft/ALAppExtensions).</br></br>To learn about the replacement feature, go to [Transitioning from API v1.0 to API v2.0](../api-reference/v2.0/transition-to-api-v2.0.md). |
 
+### Legacy Power BI apps on AppSource
+
+|Moved, Removed, or Replaced? |    Why?|
+|-----------------------------|-----|
+|Replaced| While useful to show the Power BI embed capabilities in [!INCLUDE [prod_short](../developer/includes/prod_short.md)], the following Power BI apps on AppSource are replaced: </br></br>* Dynamics 365 Business Central - CRM</br>* Dynamics 365 Business Central - Finance</br>* Dynamics 365 Business Central - Sales</br></br> The apps are replaced by seven Power BI apps for finance, sales, purchasing, inventory, projects, and manufacturing. The apps were released in version 25.1. </br></br>To learn about the replacement features, go to [aka.ms/bcAnalytics](https://aka.ms/bcAnalytics). |
+
+### Intelligent Cloud Insights
+
+|Moved, Removed, or Replaced? |    Why?|
+|-----------------------------|-----|
+|Replaced| The Intelligent Cloud Insights feature showed KPIs and insights. It's now replaced by seven Power BI apps for finance, sales, purchasing, inventory, projects, and manufacturing. The apps were released in version 25.1. <br><br>To learn about the replacement features, go to [aka.ms/bcAnalytics](https://aka.ms/bcAnalytics). |
+
+## Changes in 2025 release wave 1
+
+The following features are marked as `obsolete:pending` in 2025 release wave 1.
+
+### Excel reports on the Business Manager and Accountant Role Centers
+
+|Moved, Removed, or Replaced? |    Why?|
+|-----------------------------|-----|
+|Replaced| While useful to some organizations, the Balance Sheet, Income Statement, Statement of Cash Flow, Statement of Retained Earnings, Sales Taxes Collected, Customer Statements, Aged Accounts Payable, and Aged Accounts Receivable Excel reports that are currently available on the Business Manager and Accountant Role Centers are hard to change. To change them requires technical skills in AL and VBA programming. We've enhanced analytics capabilities in finance in each release wave over the last three years. For example, we've added data analysis capabilities on ledger tables, reports with Excel layouts that allow you to change the layout as you see fit, and Power BI reports for finance. </br></br>To learn about the replacement features, go to [aka.ms/bcFinanceAnalytics](https://aka.ms/bcFinanceAnalytics). |
+
+### Legacy Power BI apps on AppSource (warning)
+
+|Moved, Removed, or Replaced? |    Why?|
+|-----------------------------|-----|
+|Replaced| While useful for showing the Power BI embed capabilities in [!INCLUDE [prod_short](../developer/includes/prod_short.md)], the following legacy Power BI apps on AppSource are replaced: </br></br>* Dynamics 365 Business Central - CRM</br>* Dynamics 365 Business Central - Finance</br>* Dynamics 365 Business Central - Sales</br></br>The apps are replaced by seven Power BI apps for finance, sales, purchasing, inventory, projects, and manufacturing. The apps were released in version 25.1. </br></br>To learn about the replacement features, go to [aka.ms/bcAnalytics](https://aka.ms/bcAnalytics). |
+
+### Intelligent Cloud Insights (warning)
+
+|Moved, Removed, or Replaced? |    Why?|
+|-----------------------------|-----|
+|Replaced| While useful for showing KPIs and insights, the legacy Intelligent Cloud Insights feature is replaced by seven Power BI apps for finance, sales, purchasing, inventory, projects, and manufacturing. The apps were released in version 25.1. </br></br>To learn about the replacement features, go to [aka.ms/bcAnalytics](https://aka.ms/bcAnalytics). |
+
+## Changes in 2024 release wave 2
+
+The following features are marked as `obsolete:pending` in 2024 release wave 2.
+
+### Configuration packages for setup and evaluation data
+
+> [!IMPORTANT]
+> We will remove this feature in update 25.2.
+
+|Moved, Removed, or Replaced? |    Why?|
+|-----------------------------|-----|
+|Replaced| We've changed the way we prepare databases for new evaluation and production companies. Instead of using configuration packages to add demo and setup data, you now use the **Contoso Coffee demo data** app. We shipped the Contoso Coffee demo data app in an earlier release to cover gaps in our demo and setup data, such as Manufacturing, Service, and Warehouse. Because the app is easy to use and now provides the comprehensive setup and demo data that was previously available in configuration packages, we're removing the configuration packages. To do that, we had to change how the **Create New Company** assisted setup guide initializes new companies with data. Our changes might affect your extensions. For details about what we removed, explore the Object and What's removed listings. |
+|Removed| Enum 9120 "Company Data Type (Internal)"</br> Enum 9121 "Company Data Type (Sandbox)" </br> Enum 9122 "Company Data Type (Production)"</br> Codeunit 1799 "Import Config. Package File"</br> Codeunit 1800 "Assisted Company Setup":</br>* procedure WaitForPackageImportToComplete</br>* procedure FillCompanyData</br>* procedure ExistsConfigurationPackageFile</br>* procedure FindConfigurationPackageFile</br>* procedure SetUpNewCompany</br>* event OnAfterAssistedCompanySetupStatusEnabled</br>* event OnBeforeScheduleTask</br></br> Codeunit 1805 "Import Config. Package Files"</br>Table 1802 "Assisted Company Setup Status": </br>* field Import Failed</br>* field Package Imported</br>* procedure SetEnabled</br></br>Page 9192 "Company Creation Wizard":</br>* event OnBeforeValidateCompanyType</br>* event OnBeforeValidateCompanyType</br>* event OnOpenPageCheckAdditionalDemoData|
+|Replaced|In addition to making it easier to install rich demo data, this change also enables another improvement. We're loosening up the relatively rigid update policies for major and minor updates that were in place. We're giving administrators extended update periods. For major updates, we're offering five-month update periods to give more time to test and prepare. For example, partners can spread out the workload of updating customer environments, and developers can verify that all apps are compatible. We've also given administrators the ability to opt out of minor updates during a grace period. To learn more, go to [Manage environment updates more flexibly](/dynamics365/release-plan/2024wave2/smb/dynamics365-business-central/manage-environment-updates-more-flexibly).|
+
+### User groups
+
+|Moved, Removed, or Replaced? |    Why?|
+|-----------------------------|-----|
+|Replaced|User groups are replaced by security groups. Security groups were introduced in Business Central in 2023 release wave 1. They make it easier for administrators to manage user permissions by allowing them to group users by department, job function, and so on. Administrators assign the permissions to the group that its members need to do their jobs. Security groups are based on groups in Microsoft 365 admin center or Azure portal. That benefits administrators because they can use their security groups with other Dynamics 365 apps. For example, if salespeople use Business Central and SharePoint, administrators don't have to recreate the group and its members.<br><br>To learn more about security groups, go to [Control Access to Business Central Using Security Groups](/dynamics365/business-central/ui-security-groups).|
 
 ## Changes in 2024 release wave 1
 
@@ -37,6 +91,7 @@ The following features are marked as `obsolete:pending` in 2024 release wave 1.
 |Moved, Removed, or Replaced? |    Why?|
 |-----------------------------|-----|
 |Replaced| The Excel reports (Balance Sheet, Income Statement, Statement of Cash Flows, Statement of Retained Earnings, VAT Collected, Customer Statements, Aged Accounts Payable, and Aged Accounts Receivable) that are available from the Business Manager and Accountant role centers are being replaced by new reports. The new reports use Excel layouts that allow power users to modify the layouts with Excel and upload the new layouts to [!INCLUDE[prod_short](../includes/prod_short.md)]. The deprecated reports will be hidden from the role centers in 2025 release wave 1 and will be completely removed from [!INCLUDE[prod_short](../includes/prod_short.md)] in 2026 release wave 1.|
+
 ### API (v1.0) for Business Central (warning)
 
 |Moved, Removed, or Replaced? |    Why?|
@@ -205,7 +260,7 @@ When we move, remove, or replace an object, breaking changes can occur in other 
 <!--Should we include a section about this?-->
 Some features are available only under specific circumstances, or not at all intended for use in on-premises versions of [!INCLUDE[prod_short](../developer/includes/prod_short.md)]. For a list and descriptions of those features, see [Features not implemented in on-premises deployments](../features-not-implemented-on-premises.md).
 
-## See Also
+## Related information
 
 [Deprecated Features in the Platform - Clients, Server, and Database](deprecated-features-platform.md)  
 [Deprecated Features in the Austrian Version](deprecated-features-at.md)  

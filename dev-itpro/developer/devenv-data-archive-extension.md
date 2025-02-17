@@ -5,6 +5,7 @@ author: bholtorf
 ms.topic: conceptual
 ms.author: bholtorf
 ms.date: 12/21/2023
+ms.reviewer: bholtorf
 ---
 
 # Extending the Data Archive extension
@@ -125,7 +126,7 @@ The application objects for data archiving are available in the System Applicati
 |DataArchiveExportToCsv.codeunit.al     | 609        | “Data Archive Export to Csv”        |
 -->
 
-## See also
+## Related information
 [The Data Archive Extension](/dynamics365/business-central/admin-archive-data)  
 [The Microsoft_Application.app File](devenv-application-app-file.md)  
 [Extending Application Areas](devenv-extending-application-areas.md)

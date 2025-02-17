@@ -5,6 +5,7 @@ description: Learn how to upload media, such as an image, to the database for di
 ms.date: 11/08/2021
 ms.topic: conceptual
 author: SusanneWindfeldPedersen
+ms.reviewer: solsen
 ---
 
 # Working With Media on Records
@@ -153,7 +154,7 @@ To use a direct reference without the base64 conversion, change `<Value></Value>
 <Value>=Fields!CompanyInfo2Picture.Value</Value>
 ```
 
-## See Also
+## Related information
 
 [BLOB Data Type](methods-auto/blob/blob-data-type.md)  
 [Media Data Type](methods-auto/media/media-data-type.md)  

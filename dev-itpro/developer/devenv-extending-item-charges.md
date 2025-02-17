@@ -5,6 +5,7 @@ author: SusanneWindfeldPedersen
 ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: grobyns
+ms.reviewer: jswymer
 ---
 
 # Extending Item Charge Distribution Methods 
@@ -196,7 +197,7 @@ In the new codeunit, add a subscriber to the **OnAssignItemCharges** event.
 ```
 
 
-## See Also
+## Related information
 
 [Extending Application Areas](devenv-extending-application-areas.md)    
 [Module System Application](/dynamics365/business-central/application/system-application/module/system-application)    

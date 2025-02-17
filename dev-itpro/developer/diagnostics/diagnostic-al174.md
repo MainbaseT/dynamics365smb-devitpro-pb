@@ -2,10 +2,10 @@
 title: "Compiler Error AL0174"
 description: "Operator '{0}' is ambiguous on operands of type '{1}' and '{2}'."
 ms.author: solsen
-ms.date: 03/11/2024
-ms.tgt_pltfrm: na
+ms.date: 05/14/2024
 ms.topic: reference
 author: SusanneWindfeldPedersen
+ms.reviewer: solsen
 ---
 [//]: # (START>DO_NOT_EDIT)
 [//]: # (IMPORTANT:Do not edit any of the content between here and the END>DO_NOT_EDIT.)
@@ -21,6 +21,6 @@ Operator '{0}' is ambiguous on operands of type '{1}' and '{2}'.
 Binary operator is ambiguous on operands of such types.  
 
 [//]: # (IMPORTANT: END>DO_NOT_EDIT)
-## See Also  
+## Related information  
 [Get Started with AL](../devenv-get-started.md)  
 [Developing Extensions](../devenv-dev-overview.md)  

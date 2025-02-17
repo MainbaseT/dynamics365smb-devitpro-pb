@@ -4,8 +4,9 @@ description: A default dimensions object in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # defaultDimensions resource type
@@ -65,7 +66,7 @@ Here is a JSON representation of the defaultDimensions resource.
    "postingValidation": "string"
 }
 ```
-## See also
+## Related information
 
 [GET defaultDimensions](../api/dynamics_defaultDimension_Get.md)  
 [DELETE defaultDimensions](../api/dynamics_defaultDimension_Delete.md)  

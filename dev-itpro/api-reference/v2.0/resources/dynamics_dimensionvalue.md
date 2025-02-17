@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # dimensionValue resource type
@@ -62,5 +63,5 @@ Here is a JSON representation of the dimensionValue resource.
 
 
 
-## See Also
+## Related information
 [GET dimensionValue](../api/dynamics_dimensionValue_Get.md)

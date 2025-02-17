@@ -4,8 +4,9 @@ description: A shipment method object in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # shipmentMethod resource type
@@ -56,7 +57,7 @@ Here is a JSON representation of the shipmentMethod resource.
 
 
 
-## See Also
+## Related information
 [GET shipmentMethod](../api/dynamics_shipmentMethod_Get.md)  
 [DELETE shipmentMethod](../api/dynamics_shipmentMethod_Delete.md)  
 [POST shipmentMethod](../api/dynamics_shipmentMethod_Create.md)  

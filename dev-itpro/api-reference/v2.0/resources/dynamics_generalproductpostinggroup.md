@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # generalProductPostingGroup resource type
@@ -55,5 +56,5 @@ Here is a JSON representation of the generalProductPostingGroup resource.
 ```
 <!-- IMPORTANT: END>DO_NOT_EDIT -->
 
-## See Also
+## Related information
 [GET generalProductPostingGroup](../api/dynamics_generalproductpostinggroup_get.md)

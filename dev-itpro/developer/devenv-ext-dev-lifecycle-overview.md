@@ -4,6 +4,7 @@ description: Explains the phases involved in the lifecycle of developing an exte
 ms.date: 04/12/2022
 ms.topic: conceptual
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Extension Development Lifecycle Overview
@@ -14,7 +15,7 @@ The lifecycle is the cyclical software development process that typically involv
 
 ![The application lifecycle.](../media/application-lifecycle.png "The application lifecycle") 
 
-## See Also
+## Related information
 
 [Extension Data Migration Overview](devenv-migrate-table-fields.md)  
 [Extension Translation Overview](devenv-translations-overview.md)  

@@ -5,6 +5,7 @@ author: KennieNP
 ms.date: 04/01/2021
 ms.topic: troubleshooting
 ms.author: kepontop
+ms.reviewer: jswymer
 ---
 # Troubleshooting: Using Query Store to Monitor Query Performance in Business Central
 
@@ -28,5 +29,5 @@ Please visit the SQL Server documentation for more information on setup, configu
 
 [Operating the Query Store in Azure SQL Database](/azure/sql-database/sql-database-operate-query-store)
 
-## See Also
+## Related information
 [Installation Considerations for Microsoft SQL Server](../deployment/Installation-Considerations-for-Microsoft-SQL-Server.md)  

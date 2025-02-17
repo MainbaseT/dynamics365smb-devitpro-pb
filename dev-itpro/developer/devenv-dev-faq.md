@@ -6,6 +6,7 @@ ms.date: 03/01/2024
 ms.topic: conceptual
 ms.author: solsen
 ms.collection: get-started
+ms.reviewer: solsen
 ---
 
 # FAQ for developing in AL
@@ -22,9 +23,8 @@ Next, follow the [Get Started with AL](devenv-get-started.md) to set up the tool
 
 ## Which version of the [!INCLUDE[d365al_ext_md](../includes/d365al_ext_md.md)] should I use?
 
-For [!INCLUDE[d365fin_long_md](includes/d365fin_long_md.md)] cloud sandboxes you *must* use the [!INCLUDE[d365al_ext_md](../includes/d365al_ext_md.md)] offcial release available in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/vscode).
+For [!INCLUDE[d365fin_long_md](includes/d365fin_long_md.md)] cloud sandboxes you *must* use the [!INCLUDE[d365al_ext_md](../includes/d365al_ext_md.md)] official release available in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/vscode).
 
-For the latest developer preview releases, you can use the latest pre-release available in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/vscode) or the [!INCLUDE[d365al_ext_md](../includes/d365al_ext_md.md)], which is available in the *next major* artifact through the "Ready! for Dynamics 365 Business Central" program on [Microsoft Collaborate](https://aka.ms/collaborate).
 
 ## How do I enable the debugger?
 
@@ -61,6 +61,10 @@ Extensions that have been published to a sandbox environment from Visual Studio 
 
 If you have per-tenant extensions (PTEs) installed that depend on extensions published from Visual Studio Code, the per-tenant extensions will be removed too.
 
+If you have partner telemetry enabled, search for event id `LC0105`, which includes a short description of the reason for your environment update or relocation.
+
+In order to enable partner telemetry in your extension, you must specify the `applicationInsightsConnectionString` property in the manifest (app.json) of your extension. For more information about this property, see [JSON files](devenv-json-files.md).
+
 For more information, see [Sandbox Environments](../administration/environment-types.md).
 
 ## Can I create something similar to Menusuites?
@@ -81,7 +85,7 @@ For information on upgrading, see the following topics:
 [Upgrading Extensions v2](devenv-upgrading-extensions.md) and [Converting from Extensions v1 to Extensions v2](devenv-upgrade-v1-to-v2-overview.md). -->
 
 
-## See also
+## Related information
 
 [Get started with AL](devenv-get-started.md)  
 [Keyboard shortcuts](devenv-keyboard-shortcuts.md)    

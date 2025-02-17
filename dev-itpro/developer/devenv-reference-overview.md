@@ -6,6 +6,7 @@ ms.custom: evergreen
 ms.date: 03/19/2024
 ms.topic: overview
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # AL development environment reference overview
@@ -61,7 +62,7 @@ The AL code that you write for your extension is defined in codeunit objects, pa
 |Get an overview of properties in AL grouped by the objects that they support.|[Properties overview](properties/devenv-properties.md)|
 |Get an overview of triggers in AL grouped by the objects that they support.|[Triggers overview](triggers-auto/devenv-triggers.md)|
 
-## See also
+## Related information
 
 [Developing extensions](devenv-dev-overview.md)  
 [Get started with AL](devenv-get-started.md)  

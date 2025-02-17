@@ -3,7 +3,7 @@ title: Retain permissions
 description: Learn how to keep the permissions assigned to existing online users so they can continue to work as usual during cloud migration.
 author: jswymer 
 ms.author: jswymer 
-ms.reviewer: jswymer 
+ms.reviewer: jswymer
 ms.topic: how-to
 ms.date: 02/29/2024
 ms.custom: bap-template
@@ -42,7 +42,7 @@ end
 
 [Run data migration setup](migration-setup.md).
 
-## See also
+## Related information
 
 [Dynamics GP migration to Business Central online: End-to-end overview](migrate-gp-overview.md)  
 [Compare work in Dynamics GP to Business Central](migrate-dynamics-gp-videos.md)  

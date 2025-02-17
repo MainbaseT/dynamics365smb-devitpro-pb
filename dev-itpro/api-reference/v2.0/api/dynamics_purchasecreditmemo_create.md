@@ -1,5 +1,5 @@
 ---
-title: Create purchaseCreditMemoes
+title: Create purchaseCreditMemos
 description: Creates a purchase credit memo object in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.service: dynamics-365-business-central
@@ -7,13 +7,14 @@ ms.topic: reference
 ms.devlang: al
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/09/2024
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 <!-- NOTE: This article is an auto-generated stub from the metadata file. -->
 <!-- The sections marked with an EDIT_IS_REQUIRED require manual editing. -->
-# Create purchaseCreditMemoes
+# Create purchaseCreditMemos
 
 Creates a purchase credit memo in [!INCLUDE[prod_short](../../../includes/prod_short.md)].
 
@@ -22,7 +23,7 @@ Creates a purchase credit memo in [!INCLUDE[prod_short](../../../includes/prod_s
 Replace the URL prefix for [!INCLUDE[prod_short](../../../includes/prod_short.md)] depending on environment following the [guideline](../../v2.0/endpoints-apis-for-dynamics.md).
 <!-- START>EDIT_IS_REQUIRED. There URL for accessing the endpoint might be different or there might be more than one -->
 ```
-POST businesscentralPrefix/companies({id})/purchaseCreditMemoes({id})
+POST businesscentralPrefix/companies({id})/purchaseCreditMemos({id})
 ```
 <!-- END>EDIT_IS_REQUIRED -->
 ## Request headers
@@ -31,7 +32,6 @@ POST businesscentralPrefix/companies({id})/purchaseCreditMemoes({id})
 |------|-----|
 |Authorization  |Bearer {token}. Required. |
 |Content-Type  |application/json|
-|If-Match      |Required. When this request header is included and the eTag provided does not match the current tag on the **purchaseCreditMemo**, the **purchaseCreditMemo** will not be updated. |
 
 ## Request body
 
@@ -49,7 +49,7 @@ If successful, this method returns ```201 Created``` response code and a **purch
 Here is an example of the request.
 <!-- START>EDIT_IS_REQUIRED. There URL for accessing the endpoint might be different. Fill in the property values -->
 ```json
-POST https://{businesscentralPrefix}/api/v2.0/companies({id})/purchaseCreditMemoes({id})
+POST https://{businesscentralPrefix}/api/v2.0/companies({id})/purchaseCreditMemos({id})
 Content-type: application/json
 {
     "id" : "",
@@ -148,7 +148,7 @@ Content-type: application/json
 }
 ```
 <!-- END>EDIT_IS_REQUIRED -->
-## See Also
+## Related information
 
 [Tips for working with the APIs](/dynamics365/business-central/dev-itpro/developer/devenv-connect-apps-tips)  
 [purchaseCreditMemo](../resources/dynamics_purchaseCreditMemo.md)  

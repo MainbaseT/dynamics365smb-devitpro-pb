@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.devlang: al
 ms.date: 12/29/2021
 ms.author: jswymer
-
+ms.reviewer: jswymer
 ---
 
 # Escalate Support Issues to Microsoft
@@ -36,7 +36,7 @@ It might happen that a [!INCLUDE [prod_short](../includes/prod_short.md)] online
 
 <!-- TODO: How to manage your customers' support issues -->
 
-## See Also
+## Related information
 
 [Report Customer Outages](report-outage.md)  
 [Managing Technical Support](manage-technical-support.md)  

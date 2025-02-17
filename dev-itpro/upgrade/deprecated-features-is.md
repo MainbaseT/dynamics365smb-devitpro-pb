@@ -5,10 +5,10 @@ author: bholtorf
 
 ms.topic: conceptual
 ms.devlang: al
-ms. search.keywords: deprecated, Norway, local functionality
+ms.search.keywords: deprecated, Norway, local functionality
 ms.date: 04/01/2021
 ms.author: bholtorf
-
+ms.reviewer: bholtorf
 ---
 
 # Deprecated Features in the Icelandic Version of [!INCLUDE [prod_long](../developer/includes/prod_long.md)]
@@ -25,7 +25,7 @@ The local tax regulation of conditional discounts feature enables you to issue a
 
 [!INCLUDE [fields-obsolete-is](../includes/fields-obsolete-is.md)]
 
-## See Also
+## Related information
 
 [Deprecated Features in the Base App](deprecated-features-w1.md)  
 [Deprecated Features in the Platform - Clients, Server, and Database](deprecated-features-platform.md)  

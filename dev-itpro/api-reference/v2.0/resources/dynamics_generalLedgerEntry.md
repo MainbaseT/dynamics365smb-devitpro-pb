@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # generalLedgerEntry resource type
@@ -78,5 +79,5 @@ Here is a JSON representation of the generalLedgerEntry resource.
 
 
 
-## See Also
+## Related information
 [GET generalLedgerEntry](../api/dynamics_generalLedgerEntry_Get.md)

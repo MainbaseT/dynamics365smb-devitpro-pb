@@ -6,8 +6,9 @@ author: SusanneWindfeldPedersen
 
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Update purchaseInvoices
@@ -109,7 +110,7 @@ Content-type: application/json
 }
 ```
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)    
 [purchaseinvoice](../resources/dynamics_purchaseinvoice.md)    
 [Get purchaseinvoice](dynamics_purchaseinvoice_Get.md)    

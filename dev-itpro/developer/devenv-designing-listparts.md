@@ -5,6 +5,7 @@ ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: brobledodiaz
 author: blrobl
+ms.reviewer: jswymer
 ---
 
 # Working with List Parts
@@ -90,7 +91,7 @@ page 50102 "Customer Card"
 }
 ```
 
-## See Also
+## Related information
 
 [Page Parts Overview](devenv-designing-parts.md)  
 [Page Types and Layouts](devenv-page-types-and-layouts.md)  

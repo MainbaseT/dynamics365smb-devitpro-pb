@@ -4,8 +4,9 @@ description: Deletes a sales invoice line object in Dynamics 365 Business Centra
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Delete salesInvoiceLines
@@ -52,7 +53,7 @@ Here is an example of the response.
 HTTP/1.1 204 No Content
 ```
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)    
 [salesinvoiceline](../resources/dynamics_salesinvoiceline.md)    
 [Get salesinvoiceline](dynamics_salesinvoiceline_Get.md)    

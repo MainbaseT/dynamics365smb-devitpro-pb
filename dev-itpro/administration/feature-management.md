@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.search.keywords: administration, tenant, admin, environment, key, optional, feature management, early access, preview, what's new
 ms.date: 10/26/2021
 ms.author: mikebc
+ms.reviewer: jswymer
 ---
 
 # Enabling Upcoming Features Ahead of Time
@@ -151,7 +152,7 @@ In a future version, we hope to redesign feature management to better reflect lo
 
 Yes. You can turn optional features on or off in a similar way.
 
-## See also
+## Related information
 
 [New and planned features](/dynamics365-release-plan/2021wave1/)  
 [Administration of [!INCLUDE[prod_short](../includes/prod_short.md)] Online](tenant-administration.md)  

@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.author: jswymer
 author: jswymer
 ROBOTS: NOINDEX
+ms.reviewer: jswymer
 ---
 # Page 6401 Flow Selector Replacement Code
 
@@ -267,7 +268,7 @@ page 6401 "Flow Selector"
 }
 ```
 
-## See Also
+## Related information
 
 [Code Conversion from C/AL to AL](devenv-code-conversion.md)  
 

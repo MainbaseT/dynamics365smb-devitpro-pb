@@ -5,6 +5,7 @@ author: jswymer
 ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 # Migrating Tables and Fields Between Extensions
 
@@ -87,7 +88,7 @@ The order that you synchronize extensions is important:
 
     These extensions are synchronized last because the tables are moved during the synchronization of the releasing extensions. At the end of the synchronization process, the system checks for breaking changes introduced by the extension. If the extension isn't synchronized last, breaking changes will be detected.
 
-## See Also
+## Related information
 
 [Publishing and Installing an Extension](devenv-how-publish-and-install-an-extension-v2.md)  
 [JSON Files](devenv-json-files.md)  

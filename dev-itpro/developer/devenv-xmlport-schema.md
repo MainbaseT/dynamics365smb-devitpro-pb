@@ -5,6 +5,7 @@ author: blrobl
 ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: brobledodiaz
+ms.reviewer: jswymer
 ---
 
 
@@ -67,7 +68,7 @@ For more information about data consistency and validation against possible erro
 
 For information about the use of namespaces in XMLports see [Using Namespaces with XMLports](devenv-using-namespaces-with-xmlports.md).
 
-## See Also
+## Related information
 [XMLport Object](devenv-xmlport-object.md)  
 [XMLport Data Type](methods-auto/xmlport/xmlport-data-type.md)  
 [Using Namespaces with XMLports](devenv-using-namespaces-with-xmlports.md)  

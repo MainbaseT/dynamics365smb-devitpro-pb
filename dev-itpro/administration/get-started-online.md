@@ -7,6 +7,7 @@ ms.search.keywords: administration, tenant, admin, environment
 ms.date: 06/03/2022
 ms.author: jswymer
 ms.collection: get-started
+ms.reviewer: jswymer
 ---
 
 # Get started as a reseller of Business Central online
@@ -24,9 +25,6 @@ In order to be able to service [!INCLUDE [prod_short](../includes/prod_short.md)
 [!INCLUDE [csp-get-started](../developer/includes/csp-get-started.md)]
 
 [!INCLUDE [csp-admin-users](../developer/includes/csp-admin-users.md)]
-
-> [!CAUTION]
-> [!INCLUDE [admin-partneruser](../developer/includes/admin-partneruser.md)]
 
 For more information, see [Delegated Administrator Access to Business Central Online](delegated-admin.md).  
 
@@ -95,7 +93,7 @@ As a Business Central reselling partner, you are the administrator of the Busine
 
 For more information, see [Administration of Business Central Online](tenant-administration.md) and [The Business Central Administration Center](tenant-admin-center.md).  
 
-## See also
+## Related information
 
 [Administration of Business Central Online](tenant-administration.md)  
 [Deployment of [!INCLUDE[prod_long](../developer/includes/prod_long.md)] on-premises](../deployment/Deployment.md)  

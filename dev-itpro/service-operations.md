@@ -3,7 +3,7 @@ title: Service operations
 description: Learn about the operations done to keep Business Central optimized and reliable.
 author: dmc-dk
 ms.author: dmitrych 
-ms.reviewer: jswymer 
+ms.reviewer: jswymer
 ms.topic: conceptual 
 ms.collection: 
 ms.date: 02/22/2024
@@ -101,7 +101,7 @@ Scaling this deployment model to handle exponential service growth is accomplish
 
 These features have enabled the [!INCLUDE [prod_short](includes/prod_short.md)] team to improve the success rate of deployments while absorbing a high year-over-year growth in monthly deployments.  
 
-## See also
+## Related information
 
 - [Service overview](service-overview.md)  
 - [Service operations](service-operations.md)  

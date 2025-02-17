@@ -6,8 +6,9 @@ author: SusanneWindfeldPedersen
 
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Delete employee defaultDimensions
@@ -49,7 +50,7 @@ DELETE https://{businesscentralPrefix}/api/v2.0/companies({companyId})/employees
 
 No Content.
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)  
 
 [Employee](../resources/dynamics_employee.md)  

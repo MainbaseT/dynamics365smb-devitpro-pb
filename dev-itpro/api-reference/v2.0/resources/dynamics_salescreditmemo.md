@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # salesCreditMemo resource type
@@ -182,7 +183,7 @@ Here is a JSON representation of the salesCreditMemo resource.
 
 
 
-## See Also
+## Related information
 [GET salesCreditMemo](../api/dynamics_salesCreditMemo_Get.md)  
 [DELETE salesCreditMemo](../api/dynamics_salesCreditMemo_Delete.md)  
 [POST salesCreditMemo](../api/dynamics_salesCreditMemo_Create.md)  

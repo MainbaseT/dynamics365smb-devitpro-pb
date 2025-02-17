@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # salesShipmentLine resource type
@@ -79,5 +80,5 @@ Here is a JSON representation of the salesShipmentLine resource.
 
 
 
-## See Also
+## Related information
 [GET salesShipmentLine](../api/dynamics_salesShipmentLine_Get.md)

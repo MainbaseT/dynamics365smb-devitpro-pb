@@ -7,6 +7,7 @@ ms.custom: bap-template
 ms.topic: conceptual
 ms.author: jswymer
 ms.date: 11/13/2023
+ms.reviewer: jswymer
 ---
 # Setting up Multifactor Authentication (MFA) for Business Central  
 
@@ -32,7 +33,7 @@ Conditional Access in Microsoft Entra ID provides a more granular control of MFA
 For more information about creating policies, see [Conditional Access: Cloud apps, actions, and authentication context](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps).
 
 
-## See Also
+## Related information
 
 [Security and Protection](security-and-protection.md)  
 [On-Premises Security](security-onpremises.md)  
