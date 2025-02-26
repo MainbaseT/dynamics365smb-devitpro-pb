@@ -5,6 +5,7 @@ ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: jswymer
 author: jswymer
+ms.reviewer: jswymer
 ---
 #  <a name="AddExtensions"></a>Publishing, Upgrading, and Installing Extensions During Upgrade
 
@@ -142,7 +143,7 @@ This ensures that the extensions work on the new platform and application versio
     Install-NAVApp -ServerInstance <ServerInstanceName> -Name <Name> -Version <N.N.N.N>
     ```
 
-## See Also
+## Related information
   
 [Upgrading the Application Code](Upgrading-the-Application-Code.md)  
 [Upgrading to Business Central](upgrading-to-business-central.md)  

@@ -1,13 +1,14 @@
 ---
-title: "Cloud Migration API Overview"
-description: 
+title: Cloud Migration API Overview
+description: Learn how to use Cloud Migration APIs to automate the cloud migration process end-to-end.
 author: SusanneWindfeldPedersen
-ms.date: 04/01/2022
+ms.date: 05/31/2024
 ms.topic: overview
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
-# Cloud Migration APIs Overview (v1.0)
+# Cloud Migration APIs overview (v1.0)
 
 [!INCLUDE[2022_releasewave1](../../includes/2022_releasewave1.md)]
 
@@ -186,6 +187,6 @@ Authorization: Bearer {token}
 
 ```
 
-## See also
+## Related information
 
 [Endpoints for the APIs](../../api-reference/v2.0/endpoints-apis-for-dynamics.md).

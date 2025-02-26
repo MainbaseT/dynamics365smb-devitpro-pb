@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # purchaseReceipt resource type
@@ -117,5 +118,5 @@ Here is a JSON representation of the purchaseReceipt resource.
 
 
 
-## See Also
+## Related information
 [GET purchaseReceipt](../api/dynamics_purchaseReceipt_Get.md)

@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # purchaseOrderLine resource type
@@ -121,7 +122,7 @@ Here is a JSON representation of the purchaseOrderLine resource.
 ```
 <!-- IMPORTANT: END>DO_NOT_EDIT -->
 
-## See Also
+## Related information
 [GET purchaseOrderLine](../api/dynamics_purchaseorderline_get.md)  
 [DELETE purchaseOrderLine](../api/dynamics_purchaseorderline_delete.md)  
 [POST purchaseOrderLine](../api/dynamics_purchaseorderline_create.md)  

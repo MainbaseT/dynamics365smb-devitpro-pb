@@ -6,8 +6,9 @@ author: SusanneWindfeldPedersen
 
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Create salesInvoices
@@ -29,7 +30,6 @@ POST businesscentralPrefix/companies({id})/salesInvoices
 |------|-----|
 |Authorization  |Bearer {token}. Required. |
 |Content-Type  |application/json|
-|If-Match      |Required. When this request header is included and the eTag provided does not match the current tag on the **salesInvoice**, the **salesInvoice** will not be updated. |
 
 ## Request body
 In the request body, supply a JSON representation of a **salesInvoices** object.
@@ -150,7 +150,7 @@ Content-type: application/json
 }
 ```
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)  
 
 [Sales Invoice](../resources/dynamics_salesinvoice.md)  

@@ -9,6 +9,7 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # fixedAsset resource type
@@ -79,7 +80,7 @@ Here is a JSON representation of the fixedAsset resource.
 ```
 <!-- IMPORTANT: END>DO_NOT_EDIT -->
 
-## See Also
+## Related information
 [GET fixedAsset](../api/dynamics_fixedasset_get.md)
 [DELETE fixedAsset](../api/dynamics_fixedasset_delete.md)
 [POST fixedAsset](../api/dynamics_fixedasset_create.md)

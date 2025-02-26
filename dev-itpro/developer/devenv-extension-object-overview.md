@@ -6,6 +6,7 @@ ms.author: solsen
 ms.topic: overview
 ms.collection: get-started
 ms.date: 03/11/2024
+ms.reviewer: solsen
 ---
 
 # Extension objects overview
@@ -28,7 +29,7 @@ The following table lists the different extension objects that you can create in
 
 [!INCLUDE [extension-obj-same-app](includes/extension-obj-same-app.md)]
 
-## See also
+## Related information
 
 [Extensibility overview](devenv-extensibility-overview.md)
 [Table extension](devenv-table-ext-object.md)  

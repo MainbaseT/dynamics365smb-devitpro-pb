@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # picture resource type
@@ -68,7 +69,7 @@ Here is a JSON representation of the picture resource.
 
 
 
-## See Also
+## Related information
 [GET picture](../api/dynamics_picture_Get.md)  
 [DELETE picture](../api/dynamics_picture_Delete.md)  
 [PATCH picture](../api/dynamics_picture_Update.md)

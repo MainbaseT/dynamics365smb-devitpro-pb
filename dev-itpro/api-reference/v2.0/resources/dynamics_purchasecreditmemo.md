@@ -9,6 +9,7 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # purchaseCreditMemo resource type
@@ -157,7 +158,7 @@ Here is a JSON representation of the purchaseCreditMemo resource.
 ```
 <!-- IMPORTANT: END>DO_NOT_EDIT -->
 
-## See Also
+## Related information
 [GET purchaseCreditMemo](../api/dynamics_purchasecreditmemo_get.md)
 [DELETE purchaseCreditMemo](../api/dynamics_purchasecreditmemo_delete.md)
 [POST purchaseCreditMemo](../api/dynamics_purchasecreditmemo_create.md)

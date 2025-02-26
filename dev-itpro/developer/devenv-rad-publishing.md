@@ -5,6 +5,7 @@ author: SusanneWindfeldPedersen
 ms.date: 08/08/2022
 ms.topic: conceptual
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Work with Rapid Application Development
@@ -48,7 +49,7 @@ There are two commands for starting a RAD-based action.
 |<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F5</kbd>  |Start RAD publishing without debugging.|
 |<kbd>Alt</kbd>+<kbd>F5</kbd>       |Start RAD with debugging.|
 
-## See also
+## Related information
 [Developing Extensions in AL](devenv-dev-overview.md)  
 [Debugging](devenv-debugging.md)  
 

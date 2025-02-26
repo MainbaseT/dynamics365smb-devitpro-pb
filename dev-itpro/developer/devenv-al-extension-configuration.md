@@ -6,6 +6,7 @@ ms.date: 03/06/2024
 ms.topic: conceptual
 ms.author: solsen
 ms.collection: get-started
+ms.reviewer: solsen
 ---
 
 # AL Language extension configuration
@@ -53,7 +54,7 @@ The following table describes the user and workspace settings for the AL Languag
 |Snapshot Output Path|Sets the directory path where snapshot files are saved. Default is `./.snapshots`.|
 |Statement Lens Minimum|Sets the lower limit for the time spent on statement execution expressed in milliseconds. Default value is `500`. Syntax is `"al.statementLensMin": 100`. For more information, see [AL Profiler Overview](devenv-al-profiler-overview.md).|
 
-## See also
+## Related information
 
 [AL development environment](devenv-reference-overview.md)  
 [Debugging in AL](devenv-debugging.md)  

@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # pdfDocument resource type
@@ -62,5 +63,5 @@ Here is a JSON representation of the pdfDocument resource.
 
 
 
-## See Also
+## Related information
 [GET pdfDocument](../api/dynamics_pdfDocument_Get.md)

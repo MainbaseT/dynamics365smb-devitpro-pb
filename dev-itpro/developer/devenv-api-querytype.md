@@ -5,6 +5,7 @@ author: SusanneWindfeldPedersen
 ms.date: 04/17/2024
 ms.topic: conceptual
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # API query type
@@ -67,7 +68,7 @@ query 20000 "APIV1 - Customer Sales"
 }
 ```
 
-## See also
+## Related information
 
 [AL development environment](devenv-reference-overview.md)  
 [API page Type](devenv-api-pagetype.md)  

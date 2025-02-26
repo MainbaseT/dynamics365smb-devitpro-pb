@@ -4,7 +4,7 @@ decription: This topic describes how to use PerfView to view event trace data th
 ms.custom:
   - bap-template
   - evergreen
-ms.date: 04/16/2024
+ms.date: 05/28/2024
 ms.reviewer: jswymer
 ms.service: dynamics-365-op
 ms.topic: conceptual
@@ -16,7 +16,7 @@ This topic describes how to use PerfView to view [!INCLUDE[server](../developer/
   
 ### To install PerfView  
   
--   Go to [https://go.microsoft.com/fwlink/?LinkID=313428](https://go.microsoft.com/fwlink/?LinkID=313428), and then follow the instructions to download and install PerfView.  
+-   Go to [www.github.com/microsoft/perfview/blob/main/documentation/Downloading.md](https://github.com/microsoft/perfview/blob/main/documentation/Downloading.md), and then follow the instructions to download and install PerfView.  
   
 ##  <a name="ViewDataPerfView"></a> To view event trace data from an event trace log file  
   
@@ -36,7 +36,7 @@ This topic describes how to use PerfView to view [!INCLUDE[server](../developer/
   
 5.  To view details about a trace event, double-click the trace event.  
   
-## See Also  
+## Related information  
  [Use PerfView to Collect Event Trace Data](monitor-use-perfview-collect-event-trace-data.md)   
  [Use Performance Monitor to Collect Event Trace Data](monitor-use-performance-monitor-collect-event-trace-data.md)   
  [Monitoring Business Central Server Events](monitor-server-events.md)   

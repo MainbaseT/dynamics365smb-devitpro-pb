@@ -7,6 +7,7 @@ ms.devlang: al
 ms.search.keywords: administration, tenant, admin, environment, sandbox, update, apps, versions, check for updates
 ms.date: 04/01/2021
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 
 # Managing Apps
@@ -60,7 +61,7 @@ The following steps provide the general flow for updating an app.
 5. When the **Available Update Action** column for the app shows **Install update**, select this action to install the new version of the app.
 
     > [!Important]
-    > By default, the update will be applied immediately after you accept the confirmation dialogue. The users can continue working during update installation, but depending on the app changes coming with the update, they may receive a message asking them to log out and login again. It is therefore recommended that you apply the updates outside of working hours. Tick the "Schedule update in the next update window" box in the confirmation dialogue when installing an app update to start the update during the next [update window](../tenant-admin-center-update-management#set-the-update-window-for-each-environment).
+    > By default, the update will be applied immediately after you accept the confirmation dialogue. The users can continue working during update installation, but depending on the app changes coming with the update, they may receive a message asking them to log out and login again. It is therefore recommended that you apply the updates outside of working hours. Tick the "Schedule update in the next update window" box in the confirmation dialogue when installing an app update to start the update during the next [update window](tenant-admin-center-update-management.md#set-the-update-window-for-each-environment).
 
 6. Wait for the app to be installed.
 
@@ -100,7 +101,7 @@ Installed apps will always update when the environment updates to a new major or
 
 Administrators can control whether apps installed on the environment should be updated when [!INCLUDE[prod_short](../developer/includes/prod_short.md)] updates to a new minor version by using the **Apps Update Cadence** setting in the [!INCLUDE[prodadmincenter](../developer/includes/prodadmincenter.md)]. Choose **With minor and major updates** for **Apps Update Cadence** on the Environment Details page. This video gives an overview how you can control when AppSource apps update automatically on your environment:
 
->[!VIDEO https://www.microsoft.com/videoplayer/embed/RW1dhH8]
+>[!VIDEO https://learn-video.azurefd.net/vod/player?id=a3ed0192-c90b-4987-bbb7-1233d74df5d3]
 
    > [!TIP]
    > By default, the **Apps Update Cadence** setting is set to **'Default'** on all environments. Currently this means that apps installed on an environment will only automatically update with major updates (unless an app update is required for the environment to update to a new minor version), but the behavior of 'Default' may change in the future. If you want to opt-out of the default setting changing in the future, set the **Apps Update Cadence** to **With major updates**.
@@ -109,7 +110,7 @@ The Apps Update Cadence setting does not affect updates to per-tenant extensions
 
 ## What happens when an app update is installed?
 
-When you install an app update, the new app version will be published, synchronized, and updated in the background. This process usually doesn't take long, and users won't be interrupted. However, we still recommend you to install the updates outside of working hours. Tick the "Schedule update in the next update window" box in the confirmation dialogue when installing an app update to start the update during the next [update window](../tenant-admin-center-update-management#set-the-update-window-for-each-environment).
+When you install an app update, the new app version will be published, synchronized, and updated in the background. This process usually doesn't take long, and users won't be interrupted. However, we still recommend you to install the updates outside of working hours. Tick the "Schedule update in the next update window" box in the confirmation dialogue when installing an app update to start the update during the next [update window](tenant-admin-center-update-management.md#set-the-update-window-for-each-environment).
 
 ## <a name="failure"></a>What do I do when an update fails?
 
@@ -137,7 +138,7 @@ The publisher of an AppSource app may run a preview for a future version of an a
 
 [Learn more about Preview versions of AppSource Apps](../developer/devenv-checklist-submission-faq.md#questions-about-appsource-app-previews).
 
-## See also
+## Related information
 
 [Working with Administration Tools](administration.md)  
 [The Business Central Administration Center](tenant-admin-center.md)  

@@ -7,6 +7,7 @@ ms.date: 02/06/2023
 ms.topic: conceptual
 author: jswymer
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 
 # Arranging fields in rows and columns using the fixed control
@@ -107,7 +108,7 @@ You can also set up more than one fixed control in a group control. The page are
 > [!IMPORTANT]  
 > In previous versions, having a fixed control directly under a content area was supported. However, in [!INCLUDE[d365_bus_central_md](includes/d365_bus_central_md.md)], you must make sure that the fixed control is nested in a Group control. For more information, see [Supported Structure for Using the Grid and Fixed Controls](devenv-arranging-fields-using-grid-and-fixed-controls.md#supported-structure-for-using-the-grid-and-fixed-controls).
 
-## See Also
+## Related information
 
 [Field Arrangement on a FastTab](devenv-arranging-fields-on-fasttab.md)  
 [Pages Overview](devenv-pages-overview.md)  

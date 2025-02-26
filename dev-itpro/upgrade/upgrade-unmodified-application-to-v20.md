@@ -6,6 +6,7 @@ ms.date: 04/18/2024
 ms.topic: conceptual
 ms.author: jswymer
 author: jswymer
+ms.reviewer: jswymer
 ---
 
 # Upgrading Microsoft System and Base Application to Version 20
@@ -442,7 +443,7 @@ For more information, see [To export and import a permission set](/dynamics365/b
     Restart-NAVServerInstance -ServerInstance $NewBcServerInstance
     ```
 
-## See Also  
+## Related information  
 
 [Upgrading to Business Central](upgrading-to-business-central.md)  
 [Upgrading Extensions](../developer/devenv-upgrading-extensions.md)  

@@ -5,6 +5,7 @@ author: jswymer
 ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 
 # Simple list page code example
@@ -115,7 +116,7 @@ page 50111 SampleCustomerList
 }
 ```
 
-## See also
+## Related information
 
 [AL Development Environment](devenv-reference-overview.md)  
 [Page Extension Object](devenv-page-ext-object.md)  

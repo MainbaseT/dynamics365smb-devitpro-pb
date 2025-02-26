@@ -4,8 +4,9 @@ description: Gets a picture object in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Get picture
@@ -78,7 +79,7 @@ GET https://{businesscentralPrefix}/api/v2.0/companies(companyId)/items(itemId)/
 Body is the raw image data.
 
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)  
 [picture](../resources/dynamics_picture.md)  
 [Delete picture](dynamics_picture_Delete.md)  

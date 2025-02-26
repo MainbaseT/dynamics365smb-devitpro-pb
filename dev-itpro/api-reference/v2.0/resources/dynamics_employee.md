@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # employee resource type
@@ -102,7 +103,7 @@ Here is a JSON representation of the employee resource.
 
 
 
-## See Also
+## Related information
 [GET employee](../api/dynamics_employee_Get.md)  
 [DELETE employee](../api/dynamics_employee_Delete.md)  
 [POST employee](../api/dynamics_employee_Create.md)  

@@ -5,6 +5,7 @@ ms.date: 04/01/2021
 ms.topic: conceptual
 author: jswymer
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 # Linking to the Dynamics 365 Business Central App
 
@@ -114,6 +115,6 @@ The *ms-businesscentral or ms-dynamicsnav * scheme only translates to a secure s
 
 -->
   
-## See Also  
+## Related information  
  [Web Client URL](devenv-web-client-urls.md)    
 [Introducing the Business Central Mobile App](devenv-introducing-business-central-mobile-app.md)

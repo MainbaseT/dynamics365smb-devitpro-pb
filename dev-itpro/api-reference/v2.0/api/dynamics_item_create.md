@@ -6,8 +6,9 @@ author: SusanneWindfeldPedersen
 
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Create items
@@ -28,7 +29,6 @@ POST businesscentralPrefix/companies({id})/items
 |------|-----|
 |Authorization  |Bearer {token}. Required. |
 |Content-Type  |application/json|
-|If-Match      |Required. When this request header is included and the eTag provided does not match the current tag on the **item**, the **item** will not be updated. |
 
 ## Request body
 In the request body, supply a JSON representation of an **items** object.
@@ -101,7 +101,7 @@ Content-type: application/json
 }
 ```
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)    
 [item](../resources/dynamics_item.md)    
 [Get item](dynamics_item_Get.md)    

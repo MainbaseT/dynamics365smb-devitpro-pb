@@ -5,6 +5,7 @@ ms.author: jswymer
 ms.date: 04/01/2021
 ms.topic: conceptual
 author: jswymer
+ms.reviewer: jswymer
 ---
 
 # Deployment Topologies
@@ -34,7 +35,7 @@ The following table lists some of the most typical deployment topologies for the
 > [!IMPORTANT]
 > [!INCLUDE[prod_short](../developer/includes/prod_short.md)] doesn't support Microsoft Entra application Proxy, because Application Proxy doesn't fully support web sockets.
 
-## See Also  
+## Related information  
 [Install Business Central Using Setup](install-using-setup.md)  
 [Business Central Web Server Overview](web-server-overview.md)
 

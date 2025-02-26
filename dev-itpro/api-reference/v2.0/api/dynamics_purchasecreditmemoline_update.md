@@ -7,8 +7,9 @@ ms.topic: reference
 ms.devlang: al
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/09/2024
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 <!-- NOTE: This article is an auto-generated stub from the metadata file. -->
@@ -94,7 +95,7 @@ Content-type: application/json
 }
 ```
 <!-- END>EDIT_IS_REQUIRED-->
-## See Also
+## Related information
 
 [Tips for working with the APIs](/dynamics365/business-central/dev-itpro/developer/devenv-connect-apps-tips)  
 [purchaseCreditMemoLine](../resources/dynamics_purchaseCreditMemoLine.md)  

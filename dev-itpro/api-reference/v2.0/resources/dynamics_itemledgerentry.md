@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # itemLedgerEntry resource type
@@ -71,5 +72,5 @@ Here is a JSON representation of the itemLedgerEntry resource.
 ```
 <!-- IMPORTANT: END>DO_NOT_EDIT -->
 
-## See Also
+## Related information
 [GET itemLedgerEntry](../api/dynamics_itemledgerentry_get.md)

@@ -7,8 +7,9 @@ ms.topic: reference
 ms.devlang: al
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/09/2024
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 <!-- NOTE: This article is an auto-generated stub from the metadata file. -->
@@ -31,7 +32,6 @@ POST businesscentralPrefix/companies({id})/fixedAssetLocations({id})
 |------|-----|
 |Authorization  |Bearer {token}. Required. |
 |Content-Type  |application/json|
-|If-Match      |Required. When this request header is included and the eTag provided does not match the current tag on the **fixedAssetLocation**, the **fixedAssetLocation** will not be updated. |
 
 ## Request body
 
@@ -74,7 +74,7 @@ Content-type: application/json
 }
 ```
 <!-- END>EDIT_IS_REQUIRED -->
-## See Also
+## Related information
 
 [Tips for working with the APIs](/dynamics365/business-central/dev-itpro/developer/devenv-connect-apps-tips)  
 [fixedAssetLocation](../resources/dynamics_fixedAssetLocation.md)  

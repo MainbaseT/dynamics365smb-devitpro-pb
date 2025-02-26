@@ -5,6 +5,7 @@ author: jswymer
 ms.topic: conceptual
 ms.author: jswymer
 ms.date: 03/07/2023
+ms.reviewer: jswymer
 ---
 
 # Transferring data between tables using DataTransfer
@@ -165,7 +166,7 @@ begin
     dt.SetTables(Database::Destination, Database::Destination);
     dt.AddSourceFilter(dest.FieldNo("Field 1"), '=%1', 'A');
     dt.AddSourceFilter(dest.FieldNo("Field 2"), '%1..%2', 'B', 'C');
-    dt.AddConstValue(dest."Enum Field"::SomeValue, dest.FieldNo("Enum Field"));
+    dt.AddConstantValue(dest."Enum Field"::SomeValue, dest.FieldNo("Enum Field"));
     dt.CopyFields();
 end;
 ```
@@ -234,6 +235,6 @@ end;
 
 As with CopyFields, CopyRows is a bulk operation. It provides performant execution by doing only a single SQL statement for the entire operation, instead of doing multiple per-row operations. Measurements have shown an ~50x performance improvement with a DataTransfer solution compared with a record API solution.
 
-## See Also
+## Related information
 
 [Upgrading Extensions](devenv-upgrading-extensions.md)  

@@ -3,7 +3,7 @@ title: "FAQ about managing and submitting your Business Central offer"
 description: "Get answers to some of your questions about managing an offer in Partner Center when you build an app for Dynamics 365 Business Central"
 author: freddyk
 ms.date: 12/27/2023
-ms.reviewer: solsen
+ms.reviewer: jswymer
 ms.topic: conceptual
 ms.author: freddyk
 ---
@@ -29,7 +29,7 @@ No. If you don't change your app in a submission, we skip technical validation.
 [!INCLUDE[appsource-appinsights](includes/appsource-appinsights.md)].
 
 
-## See also
+## Related information
 
 [FAQ about Updating your Business Central App](app-faq-update.md)  
 [FAQ about Library & Dependency Apps in Business Central](app-faq-dependencies-libraries.md)  

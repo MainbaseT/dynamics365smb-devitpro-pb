@@ -3,7 +3,7 @@ title: "Create a new module in the System Application"
 description: Learn how to create a new module in the System Application.
 author: bholtorf
 ms.date: 11/23/2023
-ms.reviewer: solsen
+ms.reviewer: bholtorf
 ms.topic: conceptual
 ms.author: bholtorf
 ---
@@ -212,7 +212,7 @@ After running the tests successfully, changes are complete.
 
 You can now go to your Github fork and open a pull request in the BCApps repository.
 
-## See also
+## Related information
 
 [Create a .NET Wrapper Module](devenv-create-a-wrapper-module.md)  
 [Getting Started with Modules](devenv-getting-started.md)    

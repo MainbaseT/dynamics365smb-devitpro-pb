@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # salesShipment resource type
@@ -136,5 +137,5 @@ Here is a JSON representation of the salesShipment resource.
 
 
 
-## See Also
+## Related information
 [GET salesShipment](../api/dynamics_salesShipment_Get.md)

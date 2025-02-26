@@ -6,6 +6,7 @@ ms.date: 04/15/2021
 ms.topic: conceptual
 ms.author: jswymer
 author: jswymer
+ms.reviewer: jswymer
 ---
 
 # Upgrading Microsoft System and Base Application to Version 18
@@ -504,7 +505,7 @@ Don't stop the [!INCLUDE[server](../developer/includes/server.md)] instance unti
 
    Optionally, if you exported the encryption key instead of disabling encryption earlier, import the encryption key file to enable encryption.
 
-## See Also  
+## Related information  
 
 [Upgrading to Business Central](upgrading-to-business-central.md)  
 [Upgrading Extensions](../developer/devenv-upgrading-extensions.md)  

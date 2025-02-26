@@ -6,8 +6,9 @@ author: SusanneWindfeldPedersen
 
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Update purchaseInvoiceLines
@@ -93,7 +94,7 @@ Content-type: application/json
 }
 ```
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)    
 [purchaseinvoiceline](../resources/dynamics_purchaseinvoiceline.md)    
 [Get purchaseinvoiceline](dynamics_purchaseinvoiceline_Get.md)    

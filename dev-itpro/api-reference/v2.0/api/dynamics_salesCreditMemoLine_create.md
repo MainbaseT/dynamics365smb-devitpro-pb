@@ -4,8 +4,9 @@ description: Creates a sales credit memo line object in Dynamics 365 Business Ce
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Create salesCreditMemoLines
@@ -28,7 +29,6 @@ POST businesscentralPrefix/companies({id})/salesCreditMemoLines({salesCreditMemo
 |------|-----|
 |Authorization  |Bearer {token}. Required. |
 |Content-Type  |application/json|
-|If-Match      |Required. When this request header is included and the eTag provided does not match the current tag on the **salesCreditMemoLine**, the **salesCreditMemoLine** will not be updated. |
 
 ## Request body
 In the request body, supply a JSON representation of a **salesCreditMemoLines** object.
@@ -104,7 +104,7 @@ Content-type: application/json
 }
 ```
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)  
 
 [Sales Credit Memo Line](../resources/dynamics_salescreditmemoline.md)  

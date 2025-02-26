@@ -5,10 +5,10 @@ author: bholtorf
 
 ms.topic: conceptual
 ms.devlang: al
-ms. search.keywords: deprecated, Norway, local functionality
+ms.search.keywords: deprecated, Norway, local functionality
 ms.date: 04/01/2021
 ms.author: bholtorf
-
+ms.reviewer: bholtorf
 ---
 
 # Deprecated Features in the Norwegian Version of [!INCLUDE [prod_long](../developer/includes/prod_long.md)]
@@ -32,7 +32,7 @@ When printing Norwegian sales documents, you can set up different tray numbers a
 
 [!INCLUDE [fields-obsolete-no](../includes/fields-obsolete-no.md)]
 
-## See Also
+## Related information
 
 [Deprecated Features in the Base App](deprecated-features-w1.md)  
 [Deprecated Features in the Platform - Clients, Server, and Database](deprecated-features-platform.md)  

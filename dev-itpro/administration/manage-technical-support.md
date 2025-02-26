@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.devlang: al
 ms.date: 12/15/2023
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 
 # Managing technical support
@@ -181,7 +182,7 @@ Both internal and delegated administrators can access [!INCLUDE [prodadmincenter
 
 <!-- TODO: How to manage your customers' support issues -->
 
-## See also
+## Related information
 
 [How to check service health](/microsoft-365/enterprise/view-service-health?view=o365-worldwide&preserve-view=true#how-to-check-service-health)  
 [Inspecting and Troubleshooting Pages](../developer/devenv-inspecting-pages.md)  

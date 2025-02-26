@@ -3,7 +3,7 @@ title: Upgrade data for Dynamics GP cloud migration
 description: This article explains the process for running the data upgrade as part of Dynamics GP cloud migration. 
 author: jswymer
 ms.author: jswymer
-ms.reviewer: jswymer 
+ms.reviewer: jswymer
 ms.topic: conceptual 
 ms.date: 02/29/2024
 ms.custom: bap-template 
@@ -40,7 +40,7 @@ Inform any active Business Central online users to finish what they're doing and
 
 [Complete cloud migration](migration-finish-gp.md).  
 
-## See also
+## Related information
 
 [Dynamics GP migration to Business Central online: End-to-end overview](migrate-gp-overview.md)  
 [Compare Work in Dynamics GP to Business Central](migrate-dynamics-gp-videos.md)  

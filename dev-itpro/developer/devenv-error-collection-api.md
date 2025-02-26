@@ -6,7 +6,7 @@ ms.date: 12/25/2023
 ms.topic: conceptual
 author: jswymer
 ms.author: jswymer
-
+ms.reviewer: jswymer
 ---
 
 # Collectible errors API
@@ -50,7 +50,7 @@ The [ErrorBehavior](attributes/devenv-errorbehavior-attribute.md) specifies the 
 
 
 
-## See Also  
+## Related information  
 
 [ErrorInfo data type](methods-auto/errorinfo/errorinfo-data-type.md)   
 [ErrorBehavior attribute](attributes/devenv-errorbehavior-attribute.md)  

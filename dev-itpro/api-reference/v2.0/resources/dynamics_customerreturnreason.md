@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # customerReturnReason resource type
@@ -52,7 +53,7 @@ Here is a JSON representation of the customerReturnReason resource.
 ```
 <!-- IMPORTANT: END>DO_NOT_EDIT -->
 
-## See Also
+## Related information
 [GET customerReturnReason](../api/dynamics_customerreturnreason_get.md)   
 [DELETE customerReturnReason](../api/dynamics_customerreturnreason_delete.md)  
 [POST customerReturnReason](../api/dynamics_customerreturnreason_create.md)  

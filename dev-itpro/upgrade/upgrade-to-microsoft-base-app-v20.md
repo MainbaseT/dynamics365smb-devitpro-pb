@@ -5,7 +5,7 @@ ms.topic: article
 author: jswymer
 ms.author: jswymer
 ms.date: 01/03/2024
-
+ms.reviewer: jswymer
 ---
 
 # Upgrading customized C/AL application to Microsoft Base Application version 20
@@ -208,7 +208,7 @@ You'll create two versions of this extension. The first version contains the tab
 
     ```json
     {
-      "id": "11111111-aaa-2222-bbbb-333333333333",
+      "id": "00001111-aaaa-2222-bbbb-3333cccc4444",
       "name": "bc14baseapptablesonly",
       "publisher": "My publisher",
       "version": "1.0.0.0",
@@ -732,7 +732,7 @@ For more information, see [To export and import a permission set](/dynamics365/b
         > [!NOTE]
         > The step for rebuilding the coupling table is not needed if you have performed cloud migration from [!INCLUDE [prod_short](../includes/prod_short.md)] version 15 or later.
 
-## See also  
+## Related information  
 
 [Publishing and Installing an Extension](../developer/devenv-how-publish-and-install-an-extension-v2.md)  
 [Upgrading to Business Central](upgrading-to-business-central.md)  

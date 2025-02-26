@@ -3,7 +3,7 @@ title: Deprecated features in the client, server, database
 description: Describes the features that have been removed or replaced in the platform components of Business Central.
 author: brentholtorf
 ms.author: bholtorf
-ms.reviewer: jswymer
+ms.reviewer: bholtorf
 ms.topic: conceptual
 ms.date: 04/02/2024
 ms.custom: bap-template
@@ -40,6 +40,12 @@ This article describes the features that are up for removal or that have been re
 
 [!INCLUDE[soap_deprecacation](../includes/soap_deprecation_note.md)]
 
+### <a name="writetoappdb"></a>Remove write access to app database tables from AL (removal)
+
+|Removed or Replaced? |Why?|
+|---------|---------|
+|Removed | For Business Central on-premises, the main difference between running in single tenancy mode or multi tenancy mode is that in the former, it's possible to write to the app database tables from AL. Starting in version 26, this is no longer possible. |
+
 ## Changes in 2024 release wave 2 (version 25.0)
 
 ### Direct cloud migration and data upgrade from version Dynamics Business Central 2019 (v.14.x) (warning)
@@ -74,12 +80,6 @@ This article describes the features that are up for removal or that have been re
 |---------|---------|
 |Removed | For Business Central installations on-premises, it's possible to control many server settings. Two of these control the way the Business Central server add hints to SQL statements: DisableQueryHintForceOrder and DisableQueryHintLoopJoin. Starting in version 24, these server settings will no longer be available.|
 
-### <a name="writetoappdb"></a>Remove write access to app database tables from AL (removal)
-
-|Removed or Replaced? |Why?|
-|---------|---------|
-|Removed | For Business Central on-premises, the main difference between running in single tenancy mode or multi tenancy mode is that in the former, it's possible to write to the app database tables from AL. Starting in version 24, this is no longer possible. |
-
 ### <a name="soap-on-baseapp-pages"></a>Remove ability to expose a Microsoft page as a SOAP endpoint (warning)
 
 |Removed or Replaced? |Why?|
@@ -87,6 +87,13 @@ This article describes the features that are up for removal or that have been re
 |Removed | A UI page isn't an API and therefore changes to them can happen in a release without this being considered a breaking change. But for customers who expose UI pages as web services endpoints, a change in the UI can be felt as a breaking change for an integration built on this endpoint. Starting in version 26, it's no longer possible to expose a Microsoft page as a SOAP endpoint. If you need to have SOAP integrations to these pages, you need to copy the source code for the page and host the page in a per-tenant extension. |
 
 [!INCLUDE[soap_deprecacation](../includes/soap_deprecation_note.md)]
+
+### <a name="views"></a>Legacy views on list pages (removal)
+
+|Removed or Replaced? |Why?|
+|---------|---------|
+|Replaced | Legacy views are list views that were created by developers in previous releases by placing them on the Role Center page object. In April 2019 release wave, we introduced a new, modern way of creating views. Starting in version 24, views must be created using the modern way. Legacy views will no longer be supported and won't display on list pages. Learn more at [Migrating from Legacy Views to Modern Views](../developer/devenv-views-legacy.md).|
+
 
 ## Changes in 2023 release wave 2 (version 23.0)
 
@@ -114,13 +121,6 @@ This article describes the features that are up for removal or that have been re
 |Removed or Replaced? |Why?|
 |---------|---------|
 |Removed | For Business Central on-premises, the main difference between running in single tenancy mode or multi tenancy mode is that in the former, it's possible to write to the app database tables from AL. Starting in version 24, this is no longer possible. |
-
-### <a name="views"></a>Legacy views on list pages (removal)
-
-|Removed or Replaced? |Why?|
-|---------|---------|
-|Replaced | Legacy views are list views that were created by developers in previous releases by placing them on the Role Center page object. In April 2019 release wave, we introduced a new, modern way of creating views. Starting in version 23, views must be created using the modern way. Legacy views will no longer be supported and won't display on list pages. Learn more at [Migrating from Legacy Views to Modern Views](../developer/devenv-views-legacy.md).|
-
 
 ### <a name="ropc"></a>Resource Owner Password Credentials (ROPC) flow in OAuth 2.0 for [!INCLUDE[prod_short](../developer/includes/prod_short.md)] online (removal)
 
@@ -437,7 +437,7 @@ When we move, remove, or replace an object, breaking changes can result in other
 <!--Should we include a section about this?-->
 Some features are available only under specific circumstances, or not at all intended for use in on-premises versions of [!INCLUDE[prod_short](../developer/includes/prod_short.md)]. For a list and descriptions of those features, see [Features not implemented in on-premises deployments](../features-not-implemented-on-premises.md).
 
-## See also
+## Related information
 
 [Deprecated Features in the Base App](deprecated-features-w1.md)  
 [Deprecated Features in the Austrian Version](deprecated-features-at.md)  

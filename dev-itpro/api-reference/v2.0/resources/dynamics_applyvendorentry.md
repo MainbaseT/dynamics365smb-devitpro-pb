@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # applyVendorEntry resource type
@@ -71,6 +72,6 @@ Here is a JSON representation of the applyVendorEntry resource.
 This resource type requires [!INCLUDE[prod_short](../../../includes/prod_short.md)] version 18.0.
 
 
-## See Also
+## Related information
 [GET applyVendorEntry](../api/dynamics_applyvendorentry_get.md)  
 [PATCH applyVendorEntry](../api/dynamics_applyvendorentry_update.md)  

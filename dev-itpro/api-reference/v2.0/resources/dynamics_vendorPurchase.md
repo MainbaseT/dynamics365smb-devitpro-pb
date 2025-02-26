@@ -4,8 +4,9 @@ description: A vendor purchase object in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # vendorPurchase resource type
@@ -55,5 +56,5 @@ Here is a JSON representation of the vendorPurchase resource.
 
 
 
-## See Also
+## Related information
 [GET vendorPurchase](../api/dynamics_vendorPurchase_Get.md)

@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.search.keywords: administration, dependency cycle, permission set, telemetry
 ms.date: 12/20/2023
 ms.author: jswymer
+ms.reviewer: jswymer
 ---
 # Analyzing permission dependency cycle trace telemetry
 
@@ -51,7 +52,7 @@ Occurs when there's permission set dependency cycle in the application.
 {"errorMessage":"You do not have the following permission: Allow Action Automate","aadTenantId":"common","component":"Dynamics 365 Business Central Server","environmentType":"Production","telemetrySchemaVersion":"1.0","eventId":"RT0031","componentVersion":"21.0.42152.0","companyName":"CRONUS International Ltd.","clientType":"WebClient","alObjectId":"0","alObjectType":"System","permissionType":"Execute","permissionArea":"System"}
 -->
 
-## See also
+## Related information
 
 [Composing Permission Sets](../developer/devenv-permissionset-composing.md)  
 [Upgrading Extensions](../developer/devenv-upgrading-extensions.md)  

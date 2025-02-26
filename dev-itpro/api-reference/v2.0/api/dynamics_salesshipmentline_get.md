@@ -4,8 +4,9 @@ description: Gets a salesShipmentLine object in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 02/11/2022
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Get salesShipmentLines
@@ -65,7 +66,7 @@ Here is an example of the response.
 ```
 
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)  
 [salesShipmentLine](../resources/dynamics_salesShipmentLine.md)  
 

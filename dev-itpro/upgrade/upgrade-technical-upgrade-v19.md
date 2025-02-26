@@ -6,6 +6,7 @@ ms.date: 04/18/2024
 ms.topic: conceptual
 ms.author: jswymer
 author: jswymer
+ms.reviewer: jswymer
 ---
 # Technical upgrade to version 19
 
@@ -432,7 +433,7 @@ For more information, see [To export and import a permission set](/dynamics365/b
     Restart-NAVServerInstance -ServerInstance $NewBcServerInstance
     ```
 
-## See also
+## Related information
 
 [Upgrading to Business Central](upgrading-to-business-central.md)    
 [Business Central Compatibility matrix](upgrade-v14-v15-compatibility.md)

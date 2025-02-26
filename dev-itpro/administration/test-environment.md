@@ -5,6 +5,7 @@ author: jswymer
 ms.topic: conceptual
 ms.author: jswymer
 ms.date: 04/01/2021
+ms.reviewer: jswymer
 ---
 
 # Preparing test environments of [!INCLUDE[prod_long](../developer/includes/prod_long.md)]
@@ -63,7 +64,7 @@ The [!INCLUDE [prod_short](../developer/includes/prod_short.md)] environment is 
 
 About two months before a major update, you can try out new functionality in preview environments. For more information, see [Prepare for major updates with preview environments](preview-environments.md).  
 
-## See also
+## Related information
 
 [The Business Central Administration Center](tenant-admin-center.md)  
 [Managing Environments](tenant-admin-center-environments.md)  

@@ -5,10 +5,10 @@ author: bholtorf
 
 ms.topic: conceptual
 ms.devlang: al
-ms. search.keywords: deprecated, Dutch, NL, Netherlands, local functionality
+ms.search.keywords: deprecated, Dutch, NL, Netherlands, local functionality
 ms.date: 04/01/2021
 ms.author: bholtorf
-
+ms.reviewer: bholtorf
 ---
 
 # Deprecated Features in the Dutch Version of [!INCLUDE [prod_long](../developer/includes/prod_long.md)]
@@ -37,7 +37,7 @@ If you often need to create sales and purchase lines with similar information, y
 
 [!INCLUDE [fields-obsolete-nl](../includes/fields-obsolete-nl.md)]
 
-## See Also
+## Related information
 
 [Deprecated Features in the Base App](deprecated-features-w1.md)  
 [Deprecated Features in the Platform - Clients, Server, and Database](deprecated-features-platform.md)  

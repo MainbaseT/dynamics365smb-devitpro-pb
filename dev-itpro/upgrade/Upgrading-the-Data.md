@@ -6,6 +6,7 @@ ms.date: 04/18/2024
 ms.topic: conceptual
 ms.author: jswymer
 author: jswymer
+ms.reviewer: jswymer
 ---
 # Upgrading the Data to [!INCLUDE[prod_short](../developer/includes/prod_short.md)]: Single-Tenant Deployment
 
@@ -584,6 +585,6 @@ At this point, you have upgraded the database to [!INCLUDE[prod_short](../develo
 
 When you delete tables, on the **Delete** dialog box, set the **Synchronize Schema** option to **Force**.  
 
-## See Also  
+## Related information  
  [Upgrading the Application Code](Upgrading-the-Application-Code.md)   
  [Upgrading to Business Central](upgrading-to-business-central.md)

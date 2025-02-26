@@ -6,6 +6,7 @@ ms.topic: reference
 ms.devlang: al
 ms.date: 04/09/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # bankAccount resource type
@@ -68,7 +69,7 @@ Here is a JSON representation of the bankAccount resource.
 
 
 
-## See Also
+## Related information
 [GET bankAccount](../api/dynamics_bankAccount_Get.md)  
 [DELETE bankAccount](../api/dynamics_bankAccount_Delete.md)  
 [POST bankAccount](../api/dynamics_bankAccount_Create.md)  

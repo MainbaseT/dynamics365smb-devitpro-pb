@@ -5,6 +5,7 @@ author: SusanneWindfeldPedersen
 ms.date: 03/14/2024
 ms.topic: conceptual
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # API page type
@@ -78,7 +79,7 @@ page 50120 MyCustomerApi
 }
 ```
 
-## See also
+## Related information
 
 [API developer overview](devenv-api.md)
 [AL development environment](devenv-reference-overview.md)  

@@ -5,7 +5,8 @@ ms.date: 03/04/2024
 ms.topic: conceptual
 ms.author: jswymer
 author: jswymer
-ms.custom: bap-template 
+ms.custom: bap-template
+ms.reviewer: jswymer
 ---
 
 # Installing Business Central using Setup
@@ -165,7 +166,7 @@ The option to load a Setup configuration file is on the **Choose an installation
 
 [!INCLUDE[upgrade_known_issues](../developer/includes/upgrade_known_issues.md)]
 
-## See Also
+## Related information
 
  [Components](product-and-architecture-overview.md)  
  [Deployment](deployment.md)  

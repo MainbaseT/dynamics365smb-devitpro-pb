@@ -4,8 +4,9 @@ description: Creates a sales order line object in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/28/2023
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Create salesOrderLines
@@ -28,7 +29,6 @@ POST businesscentralPrefix/companies({id})/salesOrderLines
 |------|-----|
 |Authorization  |Bearer {token}. Required. |
 |Content-Type  |application/json|
-|If-Match      |Required. When this request header is included and the eTag provided does not match the current tag on the **salesOrderLine**, the **salesOrderLine** will not be updated. |
 
 ## Request body
 In the request body, supply a JSON representation of a **salesOrderLines** object.
@@ -111,7 +111,7 @@ Content-type: application/json
 }
 ```
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)  
 
 [Sales Order Line](../resources/dynamics_salesorderline.md)  

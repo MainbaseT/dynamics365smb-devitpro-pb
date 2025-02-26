@@ -4,8 +4,9 @@ description: Deletes a document attachment object in Dynamics 365 Business Centr
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 03/08/2023
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Delete documentAttachments
@@ -54,7 +55,7 @@ Here is an example of the response.
 HTTP/1.1 204 No Content
 ```
 
-## See Also
+## Related information
 
 [Tips for working with the APIs](/dynamics365/business-central/dev-itpro/developer/devenv-connect-apps-tips)  
 [documentAttachment](../resources/dynamics_documentAttachment.md)  

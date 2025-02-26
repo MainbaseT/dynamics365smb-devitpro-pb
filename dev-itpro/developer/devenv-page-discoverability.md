@@ -3,7 +3,7 @@ title: Page discoverability
 description: Introducing how to make Business Central pages discoverable by users.
 author: KennieNP
 ms.date: 04/22/2024
-ms.reviewer: solsen
+ms.reviewer: jswymer
 ms.topic: conceptual
 ms.author: kepontop
 ---
@@ -71,7 +71,7 @@ A key pillar of helping users help themselves is to give them access to help for
 For more information, see [Adding help links to your pages](./devenv-adding-help-links-from-pages-tables-xmlports.md).
 
 
-## See also
+## Related information
 
 [Adding pages to Tell Me](devenv-al-menusuite-functionality.md)  
 [Adding links to the navigation menu on the role center](devenv-adding-menus-to-navigation-pane.md)  

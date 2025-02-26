@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.author: solsen
 ms.custom: evergreen
 ms.collection: get-started
+ms.reviewer: solsen
 ---
 
 # Page object
@@ -123,7 +124,7 @@ page 50101 SimpleCustomerCard
 }
 ```
 
-## See also
+## Related information
 
 [AL development environment](devenv-reference-overview.md)  
 [Views](devenv-views.md)  

@@ -4,8 +4,9 @@ description: Dataverse API for integration with Dynamics 365 Business Central
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 09/20/2022
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Business Central Dataverse API
@@ -39,7 +40,7 @@ GET https://api.businesscentral.dynamics.com/v2.0/{environment name}/api/microso
 }
 ```
 
-## See also
+## Related information
 
 [company resource type](resources/dynamics_company.md)  
 [dataverseEntityChange resource type](resources/dynamics_dataverseentitychange.md)  

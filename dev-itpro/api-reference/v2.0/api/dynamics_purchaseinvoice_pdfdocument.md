@@ -6,8 +6,9 @@ author: SusanneWindfeldPedersen
 
 ms.topic: reference
 ms.devlang: al
-ms.date: 04/01/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Get purchaseInvoice pdfDocument
@@ -101,7 +102,7 @@ The PDF document in binary format.
 ## Remarks
 The pdfDocument is not supported for unposted purchase invoices. The purchase invoice must be posted before it is printed; if it is not posted, the response will return an error.
 
-## See also
+## Related information
 [Tips for working with the APIs](../../../developer/devenv-connect-apps-tips.md)    
 [purchaseinvoice](../resources/dynamics_purchaseinvoice.md)    
 [Get purchaseinvoice](dynamics_purchaseinvoice_Get.md)    

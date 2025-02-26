@@ -7,6 +7,7 @@ ms.topic: overview
 ms.date: 03/06/2024
 ms.custom: bap-template
 ms.collection: get-started
+ms.reviewer: solsen
 ---
 
 # Namespaces in AL
@@ -88,7 +89,7 @@ using MyNamespace.MyNestedNamespace
 > [!TIP]  
 > Use code actions to help add namespaces to existing source. For more information, see [Code actions](devenv-code-actions.md).
 
-## See also
+## Related information
 
 [Development in AL](devenv-dev-overview.md)  
 [Programming in AL](devenv-programming-in-al.md)  

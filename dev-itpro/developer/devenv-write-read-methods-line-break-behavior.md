@@ -5,6 +5,7 @@ author: SusanneWindfeldPedersen
 ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 # Write, WriteText, Read, and ReadText Method Behavior for Line Endings and Zero Terminators 
@@ -198,7 +199,7 @@ codeunit 50111 MyCodeunit
 ```
 -->
 
-## See Also
+## Related information
 
 [Write and WriteText Methods](methods-auto/outstream/outstream-data-type.md)  
 [Read and ReadText Methods](methods-auto/instream/instream-data-type.md)  

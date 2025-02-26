@@ -4,8 +4,9 @@ description: Creates a location object in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.topic: reference
 ms.devlang: al
-ms.date: 05/27/2021
+ms.date: 05/31/2024
 ms.author: solsen
+ms.reviewer: solsen
 ---
 
 <!-- NOTE: This article is an auto-generated stub from the metadata file. -->
@@ -30,7 +31,6 @@ POST businesscentralPrefix/companies({id})/locations
 |------|-----|
 |Authorization  |Bearer {token}. Required. |
 |Content-Type  |application/json|
-|If-Match      |Required. When this request header is included and the eTag provided does not match the current tag on the **location**, the **location** will not be updated. |
 
 ## Request body
 
@@ -90,7 +90,7 @@ Content-type: application/json
 }
 ```
 <!-- END>EDIT_IS_REQUIRED -->
-## See Also
+## Related information
 
 [Tips for working with the APIs](/dynamics365/business-central/dev-itpro/developer/devenv-connect-apps-tips)  
 [location](../resources/dynamics_location.md)  

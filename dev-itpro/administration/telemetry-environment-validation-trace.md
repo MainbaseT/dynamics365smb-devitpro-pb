@@ -3,7 +3,7 @@ title:  Analyzing environment validation telemetry
 description: Learn about the environment validation telemetry in Business Central.
 author: KennieNP
 ms.author: kepontop
-ms.reviewer: solsen
+ms.reviewer: jswymer
 ms.topic: conceptual
 ms.date: 10/27/2023
 ms.custom: bap-template
@@ -332,7 +332,7 @@ traces
 , diagnosticCode = customDimensions.diagnosticCode
 ```
 
-## See also
+## Related information
 
 [Monitoring and Analyzing Telemetry](telemetry-overview.md)  
 [Enable Sending Telemetry to Application Insights](telemetry-enable-application-insights.md)  
