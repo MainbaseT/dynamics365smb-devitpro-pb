@@ -2,10 +2,11 @@
 title: "Compiler Error AL0224"
 description: "Expression expected."
 ms.author: solsen
-ms.date: 03/11/2026
+ms.date: 07/06/2026
 ms.topic: reference
 author: SusanneWindfeldPedersen
 ms.reviewer: solsen
+ai.usage: ai-assisted
 ---
 [//]: # (START>DO_NOT_EDIT)
 [//]: # (IMPORTANT:Do not edit any of the content between here and the END>DO_NOT_EDIT.)
@@ -18,6 +19,25 @@ Expression expected. Provide a valid expression (variable, constant, calculation
 
 
 [//]: # (IMPORTANT: END>DO_NOT_EDIT)
+
+## How to fix this diagnostic?
+
+This error means the compiler expected an expression, such as a value, variable, or calculation, but the expression is missing or incomplete. It's often caused by a missing operand, empty parentheses, or a dangling operator.
+
+To fix it, complete the expression. The following example causes the error because the condition is incomplete:
+
+```al
+if Amount = then
+    exit;
+```
+
+Provide the missing value:
+
+```al
+if Amount = 0 then
+    exit;
+```
+
 ## Related information  
 [Get Started with AL](../devenv-get-started.md)  
 [Developing Extensions](../devenv-dev-overview.md)  
