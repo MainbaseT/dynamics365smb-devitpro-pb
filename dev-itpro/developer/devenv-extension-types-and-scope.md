@@ -16,23 +16,23 @@ An extension can move from one scope to another under certain circumstances. For
 
 ## Global apps
 
-The definition of a global app is that it fulfills one or more of the following criteria:
+A global app is an app that meets one or more of the following criteria:
 
-- It's published by Microsoft  
-- It's installed from the Marketplace  
-- It's provided by embed ISVs if your environment uses a code-customized base application. For more information, see [Publishing a code-customized Base Application](devenv-publish-code-customization.md).
+- Microsoft publishes it.  
+- You install it from the Marketplace.  
+- Embed ISVs provide it if your environment uses a code-customized base application. Learn more in [Publishing a code-customized Base Application](devenv-publish-code-customization.md).
 
 Global apps are uniquely defined by their `id` and `version`.
 
-You can't deploy a Global app with the same `id` and `version`, but different content to multiple environments.
+You can't deploy a global app with the same `id` and `version`, but different content to multiple environments.
 
-You can choose to install, uninstall, or upgrade Global apps, but you don't control when they're published or unpublished because they might be used by other environments in the service. It's also not possible to force sync a Global app.
+You can choose to install, uninstall, or upgrade global apps, but you don't control when they're published or unpublished because other environments in the service might use them. You also can't force sync a global app.
 
 Global apps can only depend on other global apps.
 
 ### Environment types
 
-Global apps can exist in Production and in sandbox environments. Learn more in [Production and sandbox environments](../administration/environment-types.md).
+Global apps can exist in production and in sandbox environments. Learn more in [Production and sandbox environments](../administration/environment-types.md).
 
 #### How to install
 
@@ -42,52 +42,52 @@ For Marketplace and Microsoft apps:
 - From the **Extension Management** page in [!INCLUDE[prod_short](../includes/prod_short.md)], you can navigate to the Marketplace embed view, locate the app, and install it. Learn more in [Installing and uninstalling extensions in Business Central](/dynamics365/business-central/ui-extensions-install-uninstall).
 
 > [!NOTE]  
-> The Marketplace offer listing contains the list of supported countries/regions. You must verify that the app is available for the country/region of your environment. If it isn't available for the country/region of your environment, the installation fails.
+> The Marketplace offer listing contains the list of supported countries and regions. You must verify that the app is available for the country or region of your environment. If the app isn't available for the country or region of your environment, the installation fails.
 
-For apps provided by Embed ISVs, installation is handled by the Embed ISV partner.
+For apps provided by Embed ISVs, the Embed ISV partner handles the installation.
 
 ### Behavior on environment upgrade
 
-Global apps are preserved on upgrade for both production and sandbox environments.
+Upgrades preserve global apps in both production and sandbox environments.
 
 #### Marketplace apps
 
-- Marketplace apps are never uninstalled unless they're preventing the tenant to upgrade. For more information, see [Maintain Marketplace apps and per-tenant extensions](app-maintain.md).
-- Marketplace apps are updated to the latest version during upgrades to a new [!INCLUDE[prod_short](../includes/prod_short.md)] major version (for instance 19.5 to 20.0), but are preserved during minor version upgrade (for instance 19.0 to 19.1) - unless the app was marked as incompatible by the extension publisher through a support request.
+- Upgrades never uninstall marketplace apps unless the apps prevent the tenant from upgrading. Learn more in [Maintain Marketplace apps and per-tenant extensions](app-maintain.md).
+- Upgrades update marketplace apps to the latest version during upgrades to a new [!INCLUDE[prod_short](../includes/prod_short.md)] major version (for example, 19.5 to 20.0), but preserve them during minor version upgrades (for example, 19.0 to 19.1) - unless the extension publisher marks the app as incompatible through a support request.
 
 #### Microsoft apps
 
-- Microsoft apps are always updated to the latest compatible version for the corresponding major/minor during upgrades to a new [!INCLUDE[prod_short](../includes/prod_short.md)] version.
+- Upgrades always update Microsoft apps to the latest compatible version for the corresponding major and minor version during upgrades to a new [!INCLUDE[prod_short](../includes/prod_short.md)] version.
 
 #### Embed apps
 
-- Embed apps behavior on environment upgrade is controlled by the partner deploying the apps.
+- The partner deploying the apps controls embed apps behavior on environment upgrade.
 
 ## Per-tenant extensions (PTEs)
 
-These apps are unique per environment. Per-tenant extensions are uniquely defined by their app `id`, `version`, and the `environment` where they're deployed. 
+These apps are unique per environment. Per-tenant extensions are uniquely defined by their app `id`, `version`, and the `environment` where you deploy them. 
 
-- You can deploy multiple PTEs with the same `id` and `version`, but different content to multiple environments. This might, however, cause you extra overhead when managing these environments.
+- You can deploy multiple PTEs with the same `id` and `version`, but different content to multiple environments. This deployment might, however, cause extra overhead when managing these environments.
 - You control when to publish, install, upgrade, uninstall, or unpublish the app because it's specific to your environment. You might also choose to force sync a PTE.
-- A PTE can have dependencies on Global apps, on other PTEs, or on DEV extensions.
+- A PTE can have dependencies on global apps, on other PTEs, or on DEV extensions.
 
 ### Environment types
 
-PTEs can exist in Production and sandbox environments. For more information, see [Production and sandbox environments](../administration/environment-types.md).
+PTEs can exist in production and sandbox environments. Learn more in [Production and sandbox environments](../administration/environment-types.md).
 	
 ### How to install
 
-From the **Extension Management** page in [!INCLUDE[prod_short](../includes/prod_short.md)], you must upload the .app file. For more information, see [Installing and uninstalling extensions in Business Central](/dynamics365/business-central/ui-extensions-install-uninstall).
+From the **Extension Management** page in [!INCLUDE[prod_short](../includes/prod_short.md)], upload the .app file. Learn more in [Installing and uninstalling extensions in Business Central](/dynamics365/business-central/ui-extensions-install-uninstall).
 	
 ### Behavior on upgrade
 
-PTEs are never uninstalled from a production environment, unless they're preventing the environment to upgrade. For more information, see [Maintain Marketplace apps and per-tenant extensions](app-maintain.md). PTEs are uninstalled when the sandbox environment is relocated if they dependent on DEV extensions, but the data isn't removed. PTEs can be upgraded to a newer version during the environment upgrade if a newer version has been staged from the **Extension Management** page.
+The upgrade process never uninstalls PTEs from a production environment, unless they're preventing the environment from upgrading. For more information, see [Maintain Marketplace apps and per-tenant extensions](app-maintain.md). The upgrade process uninstalls PTEs when the sandbox environment is relocated if they depend on DEV extensions, but the data isn't removed. The upgrade process can upgrade PTEs to a newer version during the environment upgrade if a newer version is staged from the **Extension Management** page.
 
 ## DEV extensions
 
-DEV extensions are used for development purposes. This includes extensions published from Visual Studio Code or created using [Designer](devenv-inclient-designer.md) in [!INCLUDE[prod_short](../includes/prod_short.md)].
+Use DEV extensions for development purposes. This usage includes extensions published from Visual Studio Code or created by using [Designer](devenv-inclient-designer.md) in [!INCLUDE[prod_short](../includes/prod_short.md)].
 
-You can deploy a DEV extension with the same `id` and `version`, but different content to multiple sandbox environments. You control when to publish, install, upgrade, uninstall, or unpublish the app because it's specific to your environment. You can also force sync the app. For more information, see [Launch JSON file](devenv-json-launch-file.md) and [Retaining table data after publishing](devenv-retaining-data-after-publishing.md).
+You can deploy a DEV extension with the same `id` and `version`, but different content, to multiple sandbox environments. You control when to publish, install, upgrade, uninstall, or unpublish the app because it's specific to your environment. You can also force sync the app. Learn more in [Launch JSON file](devenv-json-launch-file.md) and [Retaining table data after publishing](devenv-retaining-data-after-publishing.md).
 
 > [!NOTE]  
 > The `resourceExposurePolicy` applies differently to DEV extensions. Learn more in [Resource exposure policy setting](devenv-security-settings-and-ip-protection.md).
@@ -107,15 +107,15 @@ For information on how to install, see [Use Designer](devenv-inclient-designer.m
 
 ### Behavior on upgrade
 
-DEV extensions are uninstalled when the sandbox environment is upgraded or relocated within our service. However, the data of an app isn't removed, so you only have to republish and install the app to make it available. Any PTE that depends on a DEV extension is also uninstalled in that case.
+When you upgrade or relocate a sandbox environment within the service, the process uninstalls DEV extensions. However, the upgrade process doesn't remove the data of an app. To make the app available again, you just need to republish and install it. The upgrade process also uninstalls any PTE that depends on a DEV extension.
 
 ## Constraints on extension types
 
-In general, extensions are uniquely defined by their `id`. A specific version of an app is defined by the `id` and `version`, adding `environment` for per-tenant extensions.
+In general, the `id` uniquely defines extensions. The `id` and `version` define a specific version of an app. For per-tenant extensions, add `environment` to the definition.
 
-- It isn't possible to deploy a **Global app** and a **PTE** with the same `id`. During the upload of a PTE, we're validating that there isn't a Global app with the same `id`. Currently, the Marketplace validation process doesn't detect all identity conflicts with PTEs and uploading an app with the same ID as an existing PTE to Marketplace means that it isn't possible to update the PTE anymore. Learn more in [Technical validation checklist](devenv-checklist-submission.md#technical-validation-checklist).
+- You can't deploy a **Global app** and a **PTE** with the same `id`. During the upload of a PTE, the system validates that there's no Global app with the same `id`. Currently, the Marketplace validation process doesn't detect all identity conflicts with PTEs. If you upload an app with the same ID as an existing PTE to Marketplace, you can't update the PTE anymore. Learn more in [Technical validation checklist](devenv-checklist-submission.md#technical-validation-checklist).
 
-- It isn't possible to deploy a **Global app** and a **DEV** extension with the same `id` and `version`. When deploying the DEV version of a Global app from Visual Studio Code to a sandbox environment, for example, for development or troubleshooting, you must make sure that your DEV extension has a different `version` than what is published to Marketplace. Similarly, after you're done developing/testing your extension, you should increase the `version` before submitting to Marketplace. 
+- You can't deploy a **Global app** and a **DEV** extension with the same `id` and `version`. When you deploy the DEV version of a Global app from Visual Studio Code to a sandbox environment, for example, for development or troubleshooting, make sure your DEV extension has a different `version` than what is published to Marketplace. Similarly, after you're done developing or testing your extension, increase the `version` before submitting to Marketplace. 
 
 ## Related information
 

@@ -13,9 +13,9 @@ ms.reviewer: solsen
 
 [!INCLUDE [getstarted-contributions](includes/getstarted-contributions.md)]
 
-Extensions are a programming model where functionality is defined as an addition to existing objects and defines how they're different or modify the behavior of the solution. This section explains how you can develop extensions using the development environment for [!INCLUDE[d365fin_long_md](includes/d365fin_long_md.md)].
+Extensions are a programming model where you define functionality as an addition to existing objects. You can use extensions to define how they're different or modify the behavior of the solution. This section explains how you can develop extensions by using the development environment for [!INCLUDE[d365fin_long_md](includes/d365fin_long_md.md)].
 
-If you're new to building extensions, we recommend that you read this document to get an understanding of the basics and terms you encounter while working. Next, follow the [Get Started with AL](devenv-get-started.md) to set up the tools.
+If you're new to building extensions, read this document to get an understanding of the basics and terms you encounter while working. Next, follow the [Get Started with AL](devenv-get-started.md) to set up the tools.
 
 ## Understanding objects in the development environment
 
@@ -44,16 +44,16 @@ You have several options for creating new objects with the [!INCLUDE[d365al_ext_
 
 Using the [!INCLUDE[d365al_ext_md](../includes/d365al_ext_md.md)] for Visual Studio Code, you get the benefits of a modern development environment along with seamless publishing and integration with your [!INCLUDE[prod_short](includes/prod_short.md)] tenant. Learn more about the setup in [Get started with AL](devenv-get-started.md).
 
-Visual Studio Code and the [!INCLUDE[d365al_ext_md](../includes/d365al_ext_md.md)] let you do the following tasks:
+By using Visual Studio Code and the [!INCLUDE[d365al_ext_md](../includes/d365al_ext_md.md)], you can complete the following tasks:
 
 - Create new files for your solution.
-- Assists you with the creation of appropriate settings and configuration files.
-- Provides code snippets to help create application objects.
-- Gives compiler validation while you code.
-- Provides efficient publishing process. You can publish and see your code running by just selecting <kbd>Ctrl</kbd>+<kbd>F5</kbd>.
+- Get assistance with the creation of appropriate settings and configuration files.
+- Use code snippets to help create application objects.
+- Receive compiler validation while you code.
+- Use an efficient publishing process. You can publish and see your code running by just selecting <kbd>Ctrl</kbd>+<kbd>F5</kbd>.
 
 > [!NOTE]
-> For some users the <kbd>Ctrl</kbd>+<kbd>F5</kbd>  shortcut key might not work due to keyboard or other settings. If it doesn't work for you, run your code by choosing **Run Without Debugging** from the **Run** menu in Visual Studio Code.  
+> For some users, the <kbd>Ctrl</kbd>+<kbd>F5</kbd>  shortcut key might not work due to keyboard or other settings. If it doesn't work for you, run your code by choosing **Run Without Debugging** from the **Run** menu in Visual Studio Code.  
 
 [!INCLUDE[intelli_shortcut](includes/intelli_shortcut.md)]
 
@@ -69,11 +69,11 @@ Designer works in the client and allows you to design pages using drag and drop 
 
 ## Compiling and deploying
 
-Extensions are compiled as .app package files. The .app package file can be deployed to the [!INCLUDE[prod_short](includes/prod_short.md)] server. A .app package contains the various artifacts that deliver the new functionality to the [!INCLUDE[prod_short](includes/prod_short.md)] deployment and a manifest that specifies the name, publisher, version, and other attributes of the extension. Learn more about the manifest files in [JSON files](devenv-json-files.md).
+Compile extensions as `.app` package files. Deploy the `.app` package file to the [!INCLUDE[prod_short](includes/prod_short.md)] server. A `.app` package contains the various artifacts that deliver the new functionality to the [!INCLUDE[prod_short](includes/prod_short.md)] deployment and a manifest that specifies the name, publisher, version, and other attributes of the extension. Learn more in [JSON files](devenv-json-files.md).
 
 ## Instrumenting your app with telemetry
 
-[!INCLUDE[prod_short](includes/prod_short.md)] emits telemetry data for several operations that occur when extension code is run. You can configure your extension to send this data to a specific Application Insights resource on Microsoft Azure. Learn more in [Sending extension telemetry to Azure Application Insights](devenv-application-insights-for-extensions.md).
+[!INCLUDE[prod_short](includes/prod_short.md)] emits telemetry data for several operations that occur when extension code runs. You can configure your extension to send this data to a specific Application Insights resource on Microsoft Azure. Learn more in [Sending extension telemetry to Azure Application Insights](devenv-application-insights-for-extensions.md).
 
 ## Evaluating AL coding agents with BC-Bench
 

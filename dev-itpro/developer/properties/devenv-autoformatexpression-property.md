@@ -94,4 +94,5 @@ AutoFormatExpression = '<FormatString>#,##0.00;(#,##0.00);Zero';
 ## Related information
 
 [AutoFormatType property](devenv-autoformattype-property.md)  
-[DecimalPlaces property](devenv-decimalplaces-property.md)
+[DecimalPlaces property](devenv-decimalplaces-property.md)  
+[Formatting values, dates, and time](../devenv-format-property.md)

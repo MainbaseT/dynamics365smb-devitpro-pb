@@ -1,7 +1,7 @@
 ---
 title: FlowFilters overview
 description: Learn about how FlowFilters in Business Central sum and filter data.
-ms.date: 03/31/2023
+ms.date: 07/02/2026
 ms.topic: overview
 author: SusanneWindfeldPedersen
 ms.author: solsen
@@ -20,7 +20,7 @@ The following illustration shows the relationship between various types of datab
 
 The filters defined in the calculation formula can consist of constants, values from ordinary fields, and filters given as parameters in FlowFilter fields. In FlowFilter fields, a user can enter a filter value via the user interface in the application that affects the calculation of a FlowField.  
 
-FlowFilter fields aren't saved in the database. Instead, they're stored for each window on an individual computer so users have their own filters.  
+FlowFilter fields aren't saved in the database. Instead, each user sets their own FlowFilter values at run time, so the filters apply only to that user's current view.  
 
 You can't have a FlowFilter field as the **SourceExpression** value for a control on a page. If you do, then the control on the page isn't editable, and you can't select a value and filter the data that is displayed in the page.  
 

@@ -2,7 +2,7 @@
 title: FlowFields overview
 description: Learn how FlowFields in Business Central enhance performance by dynamically calculating data at runtime. Discover types, examples, and optimization tips.
 ms.author: solsen
-ms.date: 02/14/2025
+ms.date: 07/02/2026
 ms.topic: concept-article
 author: SusanneWindfeldPedersen
 ms.reviewer: solsen
@@ -45,7 +45,7 @@ There are seven types of FlowFields. Each is described in the following table.
 |`Sum`|Decimal, Integer, BigInteger, or Duration|The sum of a specified set in a column in a table.|  
 |`Average`|Decimal, Integer, BigInteger, or Duration|The average value of a specified set in a column in a table.|  
 |`Exist`|Boolean|Indicates whether any records exist in a specified set in a table.|  
-|`Count`|Integer|The number of records in a specified set in a table.|  
+|`Count`|Integer or BigInteger|The number of records in a specified set in a table.|  
 |`Min`|Any|The minimum value in a column in a specified set in a table.|  
 |`Max`|Any|The maximum value in a column in a specified set in a table.|  
 |`Lookup`|Any|Looks up a value in a column in another table.|  
