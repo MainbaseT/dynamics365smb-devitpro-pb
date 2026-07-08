@@ -2,7 +2,7 @@
 title: Viva Engage for Dynamics 365 Business Central Partners
 description: Viva Engage for Dynamics 365 Business Central Partners provides a set of resources, services, and tools to support Microsoft Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
-ms.date: 07/01/2026
+ms.date: 07/08/2026
 ms.reviewer: solsen
 ms.topic: article
 ms.author: solsen
@@ -28,15 +28,16 @@ Viva Engage replaces the former Dynamics 365 [!INCLUDE [prod_short](../includes/
 
 The [!INCLUDE [prod_short](../includes/prod_short.md)] partner community within Viva Engage is divided into specialized groups so partners can join the conversations most relevant to their role and areas of expertise. You will be added to the following Viva Engage Community groups for [!INCLUDE [prod_short](../includes/prod_short.md)] partners:  
 
-- Announcements  
-- Business Central Development  
-- Business Central Cloud Migration  
-- Business Central Governance and Administration  
-- Business Central Functionality (application)  
-- Business Central AI, Copilot, and Agents  
-- Business Central Integrations  
-- Business Central Localizations  
-- Business Central Test Automation  
+- Microsoft Announcements
+- Business Central Development
+- Business Central Cloud Migration
+- Business Central Governance, Administration, and Security
+- Business Central Performance
+- Business Central Application Functionality
+- Business Central AI, Agents, and Copilot
+- Business Central Integrations
+- Business Central Localization
+- Business Central Test Automation
  
 Once added, if there are groups you don't want to continue to be member of, you can easily remove yourself.
 
