@@ -98,13 +98,17 @@ For example, assume that:
 
 The estimated monthly cost is calculated as: `[50 + (5 × 3)] x 100 = 6,500 Copilot Credits/month`
 
+## Forecast Copilot Credit consumption and pricing
+
+The Agent usage estimator helps organizations forecast their estimated monthly Copilot Credit consumption and estimated price of using agents. Learn more in [Agent usage estimator](/microsoft-copilot-studio/agent-usage-estimator).
+
 ### AI development toolkit (preview)
 
 Billing events for the AI development toolkit will be announced in a future update.
 
 ## Set up billing model
 
-[!INCLUDE [prod_short](../includes/prod_short.md)] supports two billing models: prepaid capacity and pay-as-you-go. The prepaid capacity model uses Copilot Credit pack subscriptions, which are a licensing option for Microsoft Copilot Studio that you purchase in advance. The pay-as-you-go model charges for the actual number of messages consumed by agents during the month. Learn more in [Copilot licensing](/microsoft-copilot-studio/billing-licensing).
+[!INCLUDE [prod_short](../includes/prod_short.md)] supports two billing models: prepaid capacity and pay-as-you-go. The prepaid capacity model uses Copilot Credit pack subscriptions, which are a licensing option for Microsoft Copilot Studio that you purchase in advance. The pay-as-you-go model charges for the actual number of messages consumed by agents during the month. Learn more in [Copilot licensing](/microsoft-copilot-studio/billing-licensing). Learn about pricing of Copilot Credits consumed via the pay-as-you-go model in [Copilot Studio | Pay as you go pricing](https://azure.microsoft.com/pricing/details/copilot-studio/).
 
 > [!NOTE]
 >
