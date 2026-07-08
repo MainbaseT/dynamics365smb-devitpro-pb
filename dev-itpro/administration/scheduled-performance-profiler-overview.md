@@ -2,7 +2,7 @@
 title: Scheduled performance profiler overview
 description: Describes how to use the Profiler Schedules page in Business Central to troubleshoot slow processes across time.
 ms.author: sodragon
-ms.date: 03/03/2026
+ms.date: 06/18/2026
 ms.reviewer: solsen
 ms.topic: article
 author: sodragon
@@ -28,7 +28,7 @@ To get started working with the **Profiler Schedules** page, follow these steps:
 5. Select the activity type, depending on what kind of performance problem was reported (for example, **Activities in the browser** for a user experiencing slow page loads).
 6. Select a start and end time for the schedule.
     > [!TIP]  
-    > Choose a time slot that's appropriate for the issue you're investigating. For intermittent performance problems, a longer schedule - even several days - can help catch the issue. Be aware that profiling has a minor performance impact on the selected user; for details, see the [FAQ](#faq).
+    > Choose a time slot that's appropriate for the issue you're investigating. For intermittent performance problems, a longer schedule - even several days - can help catch the issue. Profiling has a minor performance impact on the selected user; for details, see the [FAQ](#faq).
 7. Close the card page.
    [!INCLUDE [prod_short](../includes/prod_short.md)] now automatically records any activity that matches your configuration and happens in the time frame that you configured.
 
@@ -52,7 +52,7 @@ A schedule can be turned off by navigating to it via the **Profiler Schedules** 
 
 The profiles generated from a specific schedule can be accessed by selecting it in the Profiler Schedules page and clicking on the **Open Profiles** action. This opens the **Performance Profiles** page.
 In the list, each profile corresponds to an activity within [!INCLUDE [prod_short](../includes/prod_short.md)]. The **Activity Description** column describes what kind of activity happened in order to 
-correlate these with user interactions, jobs, or web service calls. Various aggregate performance metrics are provided for each activity. Analysis mode can be used to perform a high-level investigation of what processes
+correlate these activities with user interactions, jobs, or web service calls. Various aggregate performance metrics are provided for each activity. Use analysis mode to perform a high-level investigation of what processes
 take the most time here. Learn more in [Learn more about data analysis mode](/dynamics365/business-central/analysis-mode).
 
 > [!TIP]  
@@ -106,11 +106,145 @@ The **Activity Duration Threshold** is a threshold that allows for filtering out
 
 While scheduled profiling is enabled for a session, it's not possible to attach the debugger to it. This includes launching with debugging, attaching to a session and snapshot debugging via Visual Studio Code.
 
+## Profiling with an AI agent (MCP server)
+
+[!INCLUDE [2026-releasewave2-later](../includes/2026-releasewave2-later.md)]
+
+> [!NOTE]
+> This feature is available in preview with a prerelease of runtime 18 and Business Central Server version 29.
+
+Instead of setting up and collecting a schedule manually, you can let an AI agent drive the whole flow through the **Performance Profiling MCP server**. The agent sets up a schedule for a slow session, you keep working, and the agent then collects the recorded profiles and explains what's slow - without you opening the **Profiler Schedules** page.
+
+The MCP server uses the same scheduling engine described earlier in this article, so how profiles are captured, stored, retained, and analyzed is unchanged. It exposes the following tools that an agent calls on your behalf:
+
+| Tool | What it does | Manual equivalent |
+|------|--------------|-------------------|
+| Schedule profiling | Creates a schedule for the target session's user and activity type, enabled for a bounded window (5 minutes by default, up to 1 hour). | [Setting up a profiler schedule](#setting-up-a-profiler-schedule) |
+| Stop schedule and get profiles | Turns off the schedule and returns the recorded `.alcpuprofile` files plus a per-activity overview (durations, SQL, and HTTP call counts and times). | [Open Profiles](#viewing-and-analyzing-the-profiles-from-a-schedule) and [Download](#downloading-performance-profiles) |
+| Get profile for activity | Returns a single activity's profile for a closer look. | Opening one row on the **Performance Profiles** page |
+| Analyze profiles in folder | A local tool that doesn't connect to Business Central. It lists the `.alcpuprofile` (or `.zip`) files you placed in the proxy's user profile folder so the agent can read and analyze them. Use it for profiles obtained out of band or captured earlier. | Opening downloaded recordings in the Visual Studio Code AL Profiler |
+
+When the agent interprets a profile, it evaluates the hot AL functions against the Business Central [performance patterns and anti-patterns](https://github.com/microsoft/BCQuality).
+
+The proxy also saves captured profiles to local files on the machine running the agent so MCP hosts that drop embedded binary content can still read them. Auto-captured profiles are grouped in per-schedule subfolders and removed once past a retention window (1 day by default; configurable with `--profileretentiondays`); cleanup runs at proxy startup and at the next capture, not on a background timer. Profiles you want to keep and analyze with the **Analyze profiles in folder** tool go in the `user` subfolder, which is never deleted automatically. The folder location is configurable with `--profilefolder`. These local files can contain sensitive business data, so handle them securely and in line with your privacy requirements.
+
+The profiles the agent collects are the same ones that appear on the **Performance Profiles** page, and you can open them in the Visual Studio Code AL Profiler just as you would a downloaded recording.
+
+### Part of the Business Central MCP server
+
+The profiling tools aren't a separate server - they're part of the [Business Central MCP server](../ai/mcp-overview.md), the same server that exposes your API pages to agents, surfaced as a developer profiling capability alongside the debugging tools. To use them, provide **altool** with the `launchprofilingmcpproxy` command - an MCP client you can set up with any MCP host (Claude CLI, GitHub Copilot CLI, Visual Studio Code, and so on), as shown in the following sections. Learn more in [Performance Profiling MCP proxy](/dynamics365/business-central/dev-itpro/developer/devenv-al-tool#performance-profiling-mcp-proxy).
+
+### You need the session ID of the slow connection
+
+The profiling MCP always targets one specific session, so before you start you need the **numeric session ID** of the connection you want to profile - the agent passes it to every tool call. An administrator can identify the session and its ID from the list of active sessions for the environment; the same numeric session ID is the one reported as the session ID in telemetry. You give it to the agent in your prompt - for example, *"Profile session 10 for the next five minutes and tell me what's slow."*
+
+### Setting it up
+
+The MCP server is the `launchprofilingmcpproxy` command of [ALTool](/dynamics365/business-central/dev-itpro/developer/devenv-al-tool#performance-profiling-mcp-proxy), a .NET tool you install once:
+
+```bash
+dotnet tool install --global Microsoft.Dynamics.BusinessCentral.Development.Tools
+```
+
+Each MCP host launches that command as a stdio server. The connection target (cloud environment or on-premises server) and the authentication method are passed as command-line `args`. The examples in the following sections connect to a cloud sandbox. For on-premises servers, see [Performance Profiling MCP proxy](/dynamics365/business-central/dev-itpro/developer/devenv-al-tool#performance-profiling-mcp-proxy) for information about the `--server`, `--serverinstance`, and `--port` options, as well as the full option and authentication reference.
+
+> [!NOTE]  
+> The credentials themselves *aren't* command-line arguments. The proxy has no option for them, so secrets never end up in `args`. The proxy reads them from its environment instead, which you set through the server's `env` block: for **cloud** you can either sign in interactively by using `altool auth login` (the proxy then reads the cached token automatically - no `env` block needed) or set `BC_ACCESS_TOKEN` (a Microsoft Entra access token); for **on-premises** `UserPassword` authentication set `BC_SERVER_USERNAME` and `BC_SERVER_PASSWORD`. Reference an environment variable rather than hardcoding the value so the secret stays out of the config file. In Visual Studio Code, the AL extension handles sign-in for you, so no `env` block is needed when the server is autoregistered.
+
+For a cloud environment, you can authenticate in one of two ways.
+
+**Interactive sign-in (recommended for local use).** Sign in once as a user who has access to the environment:
+
+```bash
+altool auth login --environmenttype Sandbox --environmentname sandbox --tenant contoso.onmicrosoft.com
+```
+
+This method opens a browser and then stores the token - together with a refresh token - in a local cache shared by the Business Central AL dev tools. The proxy reads it automatically on every run and refreshes it silently, so you don't need a `BC_ACCESS_TOKEN` `env` block and you won't hit the one-hour token expiry.
+
+**Pre-acquired token (for headless or CI/CD).** When an interactive sign-in isn't possible, supply a token through `BC_ACCESS_TOKEN` instead. Acquire it by using the [Azure CLI](/cli/azure/) (after `az login` as a user who has access to the environment), requesting a token for the Business Central API scope:
+
+```bash
+az account get-access-token --scope https://api.businesscentral.dynamics.com/.default --query accessToken --output tsv
+```
+
+Assign the result to the `BC_ACCESS_TOKEN` environment variable that the `env` block references. This token is short-lived (about one hour), so refresh it when it expires. `BC_ACCESS_TOKEN` takes precedence over an interactive sign-in, so leave it unset when you use `altool auth login` - a stale value overrides the cached token and the connection fails. In Visual Studio Code, the AL extension acquires and refreshes the token for you.
+
+The host-specific examples in the following sections include a `BC_ACCESS_TOKEN` `env` block for the pre-acquired-token approach. If you signed in by using `altool auth login`, omit the `env` block entirely.
+
+#### Claude CLI
+
+Register the server by using the `claude mcp add` command:
+
+```bash
+claude mcp add bc-profiling -e BC_ACCESS_TOKEN=$BC_ACCESS_TOKEN -- altool launchprofilingmcpproxy --environmenttype Sandbox --environmentname sandbox --tenant contoso.onmicrosoft.com
+```
+
+This command is equivalent to the following stdio entry in your Claude configuration:
+
+```json
+{
+  "mcpServers": {
+    "bc-profiling": {
+      "command": "altool",
+      "args": ["launchprofilingmcpproxy", "--environmenttype", "Sandbox", "--environmentname", "sandbox", "--tenant", "contoso.onmicrosoft.com"],
+      "env": { "BC_ACCESS_TOKEN": "${BC_ACCESS_TOKEN}" }
+    }
+  }
+}
+```
+
+#### GitHub Copilot CLI
+
+Add the server to the Copilot CLI MCP configuration (`~/.copilot/mcp-config.json`):
+
+```json
+{
+  "mcpServers": {
+    "bc-profiling": {
+      "type": "local",
+      "command": "altool",
+      "args": ["launchprofilingmcpproxy", "--environmenttype", "Sandbox", "--environmentname", "sandbox", "--tenant", "contoso.onmicrosoft.com"],
+      "tools": ["*"],
+      "env": { "BC_ACCESS_TOKEN": "$BC_ACCESS_TOKEN" }
+    }
+  }
+}
+```
+
+#### Visual Studio Code
+
+In Visual Studio Code agent mode, you don't configure anything: the AL extension registers the **Business Central Profiling MCP Server** automatically and derives the connection from your `launch.json`. Sign in when prompted, and then ask the agent to profile a session. To wire it up manually in another editor, add an equivalent stdio entry to `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "bc-profiling": {
+      "type": "stdio",
+      "command": "altool",
+      "args": ["launchprofilingmcpproxy", "--environmenttype", "Sandbox", "--environmentname", "sandbox", "--tenant", "contoso.onmicrosoft.com"],
+      "env": { "BC_ACCESS_TOKEN": "${env:BC_ACCESS_TOKEN}" }
+    }
+  }
+}
+```
+
+After the server is registered, prompt the agent - for example, *"Profile session 10 for the next five minutes and tell me what's slow"* - and it sets up the schedule, collects the profiles, and summarizes the hot paths.
+
+### Permissions and limitations
+
+The agent connects with your Business Central identity and acts entirely within your permissions. Every action is audited under your user, just like the manual workflow:
+
+- **The MCP server must be enabled** for the environment. Learn more in [Configure the Business Central MCP server](../ai/configure-mcp-server.md).
+- **Profiling your own session** needs the same access as [creating a schedule](#permissions-for-creating-a-schedule) by hand: permission to create profiler schedules and read the resulting performance profiles.
+- **Profiling another user's session** is delegated debugging, so you must belong to the **D365 ATTACH DEBUG** permission set - the same permission required for [Attach and Debug Next](/dynamics365/business-central/dev-itpro/developer/devenv-attach-debug-next). Without it, the request is denied.
+
+Finally, the [debugging restriction](#scheduled-profiling-and-debugging) still applies: while a schedule is active for a session, the debugger can't attach to it.
+
 ## FAQ
 
 ### What's the performance impact of running with a profiler schedule?
 
-Profiling only affects the specific user selected in the schedule, and only for the selected type of activity (for example, activities in the browser). Other users and other activity types aren't impacted at all. The overhead of profiling applies only to AL code execution and is typically around 10%. Because database calls, which tend to dominate overall execution time, aren't affected by profiling, the real-world impact on the user's experience is usually much smaller.
+Profiling only affects the specific user selected in the schedule, and only for the selected type of activity (for example, activities in the browser). Other users and other activity types aren't impacted at all. The overhead of profiling applies only to AL code execution and is typically around 10%. Because database calls, which tend to dominate overall execution time, aren't affected by profiling, the real-world impact on the user's experience is much smaller.
 
 ### Is scheduled profiling enabled for my session?
 
@@ -136,5 +270,6 @@ Due to the background processing of profiles, it's possible that some profiles w
 ## Related information
 
 [Performance Profiler overview](performance-profiler-overview.md)  
+[ALTool](/dynamics365/business-central/dev-itpro/developer/devenv-al-tool)  
 [Managing technical support](manage-technical-support.md)  
 [Escalate support issues to Microsoft](raise-support-case.md)  
