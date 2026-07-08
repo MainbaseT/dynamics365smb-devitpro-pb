@@ -11,9 +11,9 @@ ms.reviewer: solsen
 
 # Extension objects overview
 
-This article provides an overview of the different extension objects that you can write to extend base application functionality in [!INCLUDE [prod_short](includes/prod_short.md)]. Extension objects can extend tables, pages, reports, and enums. With an extension object you can, for example, add new fields, actions, and layout to an existing page, or add data items, columns, request pages, and layouts to an existing report. With an enum extension, you can add new values to an existing enumeration. 
+This article provides an overview of the different extension objects that you can write to extend base application functionality in [!INCLUDE [prod_short](includes/prod_short.md)]. You can use extension objects to extend tables, pages, reports, and enums. For example, by using an extension object, you can add new fields, actions, and layout to an existing page, or add data items, columns, request pages, and layouts to an existing report. By using an enum extension, you can add new values to an existing enumeration. 
 
-For a base object to be extensible, it must be marked with the property `Extensible = true;`. The default value for all objects is that they're extensible. Therefore, you don't have to specify this property explicitly in your code. 
+For a base object to be extensible, you must mark it with the property `Extensible = true;`. The default value for all objects is that they're extensible. Therefore, you don't have to specify this property explicitly in your code. 
 
 The following table lists the different extension objects that you can create in AL.
 

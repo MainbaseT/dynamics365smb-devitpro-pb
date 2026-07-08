@@ -16,7 +16,7 @@ For a definition of the different extension types and their scope, see [Extensio
 
 ## Moving a PTE to Marketplace
 
-**Scenario:** You've deployed your extension for selected customers as a PTE and are now aiming at covering more markets by deploying it as a Marketplace app.
+**Scenario:** You deployed your extension for selected customers as a PTE and now want to cover more markets by deploying it as a Marketplace app.
 
 ### Identity requirements for moving a PTE to Marketplace
 
@@ -33,14 +33,12 @@ For a definition of the different extension types and their scope, see [Extensio
 - You can find the full list of requirements for Marketplace apps here:  
   - [Technical Validation Checklist](devenv-checklist-submission.md)
   - [Marketing Validation Checklist](readiness/readiness-checklist-marketing.md)
-    
-<!-- the same extension cannot be installed as a pte and global on an env. Object name will collied -->
 
-### Other information moving a PTE to Marketplace
+### Other information for moving a PTE to Marketplace
 
 - If you want to move the data by having the two apps (PTE and Marketplace app) installed side-by-side, then you must ensure that the two apps can be installed side-by-side. For this, they must not share any object names nor IDs. You can then define another PTE depending on both apps that would take care of moving the data.
 
-- All dependent extensions must be updated to use the new `App ID` in their `app.json` file and to reference the objects defined in the extension by their new name and object ID.
+- Update all dependent extensions to use the new app ID in their `app.json` file and to reference the objects defined in the extension by their new name and object ID.
 
 
 ## Moving a DEV extension to Marketplace
@@ -54,13 +52,13 @@ For a definition of the different extension types and their scope, see [Extensio
 - Due to some current limitations in our service, it isn't possible to have a Marketplace app and a PTE extension with the same `name`, `publisher`, and `version`. You must then change the `name`, `publisher`, or `version` of the app before uploading it to Marketplace.
 
 > [!NOTE]  
-> Alternatively, you can also uninstall and unpublish the DEV extension with this app `id` from your sandboxes environment. Make sure to select the option to delete the extension data and extension schema when uninstalling the extension.
+> Alternatively, you can also uninstall and unpublish the DEV extension with this app `id` from your sandbox environment. Make sure to select the option to delete the extension data and extension schema when uninstalling the extension.
 
 ### Other requirements for moving a DEV extension to Marketplace
 
-- Marketplace apps must use a specific ID range, while DEV extensions don't have any ID range limitation. You might then have to change the ID of all the objects in your extension. For more information, see [Object Ranges](devenv-object-ranges.md).
+- Marketplace apps must use a specific ID range, while DEV extensions don't have any ID range limitation. You might need to change the ID of all the objects in your extension. For more information, see [Object ranges](devenv-object-ranges.md).
 
-- Marketplace apps are required to use affixes for their object names, while DEV extensions don't have any affix usage requirements. You might then have to rename all the objects in your extension to use affixes. For more information, see [Benefits and Guidelines for using a Prefix or Suffix](../compliance/apptest-prefix-suffix.md) 
+- Marketplace apps must use affixes for their object names, while DEV extensions don't have any affix usage requirements. You might need to rename all the objects in your extension to use affixes. For more information, see [Benefits and guidelines for using a prefix or suffix](../compliance/apptest-prefix-suffix.md).
 
 - You can find the full list of requirements for Marketplace apps here:  
   - [Technical Validation Checklist](devenv-checklist-submission.md)
@@ -82,7 +80,7 @@ Publishing a Marketplace app to a sandbox environment as a DEV extension is a co
 
 ### Other requirements for publishing a Marketplace app as a DEV extension
 
-- If you haven't changed the app `id` of the Marketplace app in your DEV extension, to prevent publishing the DEV extension if another Marketplace app depends on that particular Marketplace app. If you want to achieve such functionality the whole chain of dependencies should be published as DEV extensions with different app `id`.
+- If you don't change the app `id` of the Marketplace app in your DEV extension, publishing the DEV extension is prevented when another Marketplace app depends on that particular Marketplace app. To achieve such functionality, publish the whole chain of dependencies as DEV extensions with different app `id` values.
 
 ## Publishing a PTE as a DEV extension
 
@@ -114,21 +112,21 @@ You can find the full list of requirements for PTE in the documentation for the 
 
 ### Identity requirements for moving a Marketplace app to a PTE
 
-- It's not possible to deploy a Marketplace app and a PTE with the same `id`. You must then change the `id` of the extension before uploading it the PTE. This means that the data won't be available anymore for environments that had the PTE installed and are now using the Marketplace app. Dependent extensions need to be updated to use the new app ID in their `app.json` file.
+- You can't deploy a Marketplace app and a PTE with the same `id`. You must change the `id` of the extension before deploying it as a PTE. This change means that the data isn't available anymore for environments that had the Marketplace app installed and are now using the PTE. You need to update dependent extensions to use the new app ID in their `app.json` file.
 
 - If you wish to deprecate the offer in Marketplace, see [Discontinuing a Marketplace app](devenv-app-discontinue.md).
 
-### More requirements for moving a Marketplace app to a PTE
+### Other requirements for moving a Marketplace app to a PTE
 
-- Marketplace apps and PTEs are using different ID ranges. You must then change the ID of all the objects in your extension. For more information, see [Object Ranges](devenv-object-ranges.md).
+- Marketplace apps and PTEs use different ID ranges. You must change the ID of all the objects in your extension. To learn more, see [Object ranges](devenv-object-ranges.md).
 
-- To avoid potential name conflicts if the Marketplace app and the PTE are installed side-by-side, it's recommend changing the name of all the objects in your extension.
+- To avoid potential name conflicts if the Marketplace app and the PTE are installed side-by-side, change the name of all the objects in your extension.
 
 - You can find the full list of requirements for PTE in the documentation for the [PerTenantExtensionCop Analyzer](analyzers/pertenantextensioncop.md).
 
-### Other information moving a Marketplace app to a PTE
+### Other information for moving a Marketplace app to a PTE
 
-- Even if you stop distributing the offer in Partner Center, the app still exists in [!INCLUDE[prod_short](../includes/prod_short.md)] and the App ID remains reserved for it. It then can't be attributed to the PTE.
+- Even if you stop distributing the offer in Partner Center, the app still exists in [!INCLUDE[prod_short](../includes/prod_short.md)] and the app ID remains reserved for it. You can't attribute the app ID to the PTE.
 
 - If you want to move the data by having the two apps (PTE and Marketplace app) installed side-by-side, then you must ensure that the two apps can be installed side-by-side. For this, they must not share any object names nor IDs. You can then define another PTE depending on both apps that would take care of moving the data.
 
@@ -137,6 +135,6 @@ You can find the full list of requirements for PTE in the documentation for the 
 
 ## Related information
 
-[Developing Extensions](devenv-dev-overview.md)  
-[Get Started with AL](devenv-get-started.md)  
-[Extension Types and Scope](devenv-extension-types-and-scope.md)
+[Developing extensions](devenv-dev-overview.md)  
+[Get started with AL](devenv-get-started.md)  
+[Extension types and scope](devenv-extension-types-and-scope.md)

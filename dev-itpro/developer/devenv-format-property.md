@@ -1,7 +1,7 @@
 ---
 title: Formatting values, dates, and time
 description: Learn how to format values, dates, and time in Business Central.
-ms.date: 03/18/2025
+ms.date: 07/03/2026
 ms.topic: concept-article
 author: SusanneWindfeldPedersen
 ms.reviewer: solsen
@@ -18,7 +18,7 @@ Set `Format` to a predefined format, or build your own format. Learn more in [Fo
 
 ## Basic settings  
 
-To choose a predefined format, use the syntax: <Standard Format,*X*>, where *X* is one of the entries in the **Value** column of the following table.  
+To choose a predefined format, use the syntax: `<Standard Format,*X*>`. The available values depend on the data type. Values 0, 1, and 2 have the following common meanings. Other values are shown in the standard format tables later in this article.  
   
 |Value|Description|  
 |-----|---------------------------------------|  
@@ -54,10 +54,12 @@ The following table shows the syntax.
 
 |AttributeName value|Description|
 |----------------|----------------------|
-|Standard Format| The `Standard Format` attribute specifies the standard format that you want to use. The Standard Format attribute must be the first attribute in the format expression.|
-|1000Character| The `1000Character` attribute specifies the character that separates the thousandths place digit from the hundredths place digit, the millionth place digit from the hundred thousandths place digit, and so on. The `1000Character` attribute must be after the `Integer` or `Integer Thousand` field name and before the Decimals field name.|
+|Standard Format| The `Standard Format` attribute specifies the standard format that you want to use.|
+|1000Character| The `1000Character` attribute specifies the character that separates groups of thousands in the integer part of the value. The `1000Character` attribute must be after the `Integer` or `Integer Thousand` field name and before the Decimals field name.|
 |Comma| The `Comma` attribute specifies the character that separates the integer from the decimals. The `Comma` attribute must be after the `Decimals` field name.|
+|Overflow| The `Overflow` attribute specifies the character that's used when the formatted result exceeds the field length.|
 |Filler Character | The `Filler Character` indicates the character that's used to fill empty spaces.|
+|Precision| The `Precision` attribute specifies the minimum and maximum number of decimal places.|
 
 ### FieldName values
 
@@ -258,5 +260,8 @@ For Text and Code, all formats should resemble the following: \<Text>.
   
 ## Related information
 
+[AutoFormatType property](properties/devenv-autoformattype-property.md)  
+[AutoFormatExpression property](properties/devenv-autoformatexpression-property.md)  
+[FormatEvaluate property](properties/devenv-formatevaluate-property.md)  
 [DecimalPlaces property](properties/devenv-decimalplaces-property.md)  
 [About dates in Business Central](devenv-about-dates.md)

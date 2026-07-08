@@ -5,14 +5,12 @@ author: SusanneWindfeldPedersen
 ms.author: solsen
 ms.reviewer: solsen
 ms.topic: concept-article
-ms.date: 03/01/2024
+ms.date: 07/07/2026
 ms.custom: bap-template
 ms.collection: get-started
 ---
 
 # AL Home
-
-[!INCLUDE [2023_releasewave1](../includes/2023_releasewave1.md)]
 
 [!INCLUDE [getstarted-contributions](includes/getstarted-contributions.md)]
 

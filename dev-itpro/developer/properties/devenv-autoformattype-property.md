@@ -95,4 +95,5 @@ DecimalPlaces = 1 : 3;
     
 ## Related information
 
-[AutoFormatExpression property](devenv-autoformatexpression-property.md)
+[AutoFormatExpression property](devenv-autoformatexpression-property.md)  
+[Formatting values, dates, and time](../devenv-format-property.md)

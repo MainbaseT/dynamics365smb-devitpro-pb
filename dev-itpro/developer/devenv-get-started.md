@@ -19,44 +19,44 @@ To get started writing extensions for [!INCLUDE[prod_short](includes/prod_short.
 
 ## Steps to set up a sandbox environment and Visual Studio Code
 
-Go through the following steps to set up a sandbox environment. Once you've set up a sandbox environment, you get sample code that compiles and runs with just a few commands.
+Go through the following steps to set up a sandbox environment. Once you set up a sandbox environment, you get sample code that compiles and runs with just a few commands.
 
-1) Sign up for a [Dynamics 365 Business Central sandbox](https://signup.microsoft.com/signup?sku=6a4a1628-9b9a-424d-bed5-4118f0ede3fd&ru=https%3A%2F%2Fbusinesscentral.dynamics.com%2FSandbox%2F%3FredirectedFromSignup%3D1). 
-2) Download [Visual Studio Code](https://code.visualstudio.com/Download).  
-3) Download the [[!INCLUDE[d365al_ext_md](../includes/d365al_ext_md.md)]](https://marketplace.visualstudio.com/items?itemName=ms-dynamics-smb.al).
-4) Select <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to open the **User Settings** window; here you can modify the [telemetry settings](#telemetry-settings).
-5) Select <kbd>Alt</kbd>+<kbd>A</kbd>, and right after, <kbd>Alt</kbd>+<kbd>L</kbd> to trigger the **AL Go!** command, choose a path to a new empty folder and which version to run. Then choose **Microsoft cloud sandbox** as the server.  
+1. Sign up for a [Dynamics 365 Business Central sandbox](https://signup.microsoft.com/signup?sku=6a4a1628-9b9a-424d-bed5-4118f0ede3fd&ru=https%3A%2F%2Fbusinesscentral.dynamics.com%2FSandbox%2F%3FredirectedFromSignup%3D1). 
+1. Download [Visual Studio Code](https://code.visualstudio.com/Download).  
+1. Download the [[!INCLUDE[d365al_ext_md](../includes/d365al_ext_md.md)]](https://marketplace.visualstudio.com/items?itemName=ms-dynamics-smb.al).
+1. Select <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to open the **User Settings** window. Modify the [telemetry settings](#telemetry-settings).
+1. Select <kbd>Alt</kbd>+<kbd>A</kbd>, and right after, <kbd>Alt</kbd>+<kbd>L</kbd> to trigger the **AL Go!** command. Choose a path to a new empty folder and which version to run. Then choose **Microsoft cloud sandbox** as the server.  
   The **AL: Go!** command creates a new AL project with all the necessary files and folders including the `app.json` and `launch.json` files.
-6) Enter the credentials that you provided for the sign-up.
-7) Select <kbd>Ctrl</kbd>+<kbd>F5</kbd> to deploy and run the extension on your online sandbox tenant.  
+1. Enter the credentials that you provided for the sign-up.
+1. Select <kbd>Ctrl</kbd>+<kbd>F5</kbd> to deploy and run the extension on your online sandbox tenant.  
 
 You now have a `HelloWorld` sample that compiles and runs. The JSON files in the project are automatically updated with the settings that allows you to select <kbd>Ctrl</kbd>+<kbd>F5</kbd> to build and deploy the solution to [!INCLUDE[prod_short](includes/prod_short.md)]. Learn more in [JSON files](devenv-json-files.md).
 
 > [!NOTE]
-> With runtime 16.0 and later, you can cancel an in‑progress publish. Hit the **Cancel** button in the dialog in the lower right corner. The operation stops packaging/upload steps as soon as possible; partial artifacts aren’t applied to the server.
+> With runtime 16.0 and later, you can cancel an in‑progress publish. Select the **Cancel** button in the dialog in the lower right corner. The operation stops packaging and upload steps as soon as possible. Partial artifacts aren't applied to the server.
 
 ### Things to note
 
-- If you want to create a container-based sandbox, see [Get started with the container sandbox development environment](devenv-get-started-container-sandbox.md). Learn more about which sandboxes you can choose in [Sandbox environments for Dynamics 365 Business Central development](devenv-sandbox-overview.md).
-- It's not supported to publish an extension from Visual Studio Code with the same identifiers as an extension, which is already published to Marketplace. Identifiers include the combination of appID and version or name, publisher, and version. If you do publish such an extension, it can be removed at any time.
-- For some users the <kbd>Ctrl</kbd>+<kbd>F5</kbd> shortcut key might not work due to keyboard or other settings. If it doesn't work for you, run your code by choosing **Run Without Debugging** from the **Run** dropdown in Visual Studio Code.
-- If you want to change your configuration at a later point in time, you can do so in the launch.json file. Just choose the **Add Configuration** button on the bottom right side, and then choose one of the available options. You don't have a launch.json file until you have run the `AL:Go!` command.
+- For information about creating a container-based sandbox, see [Get started with the container sandbox development environment](devenv-get-started-container-sandbox.md). To learn more about which sandboxes you can choose, see [Sandbox environments for Dynamics 365 Business Central development](devenv-sandbox-overview.md).
+- You can't publish an extension from Visual Studio Code with the same identifiers as an extension that's already published to Marketplace. Identifiers include the combination of appID and version or name, publisher, and version. If you do publish such an extension, it can be removed at any time.
+- Due to keyboard or other settings, some users might find that the <kbd>Ctrl</kbd>+<kbd>F5</kbd> shortcut key doesn't work. If it doesn't work for you, run your code by choosing **Run Without Debugging** from the **Run** dropdown in Visual Studio Code.
+- You can change your configuration later in the `launch.json` file. Choose the **Add Configuration** button on the bottom right side, and then choose one of the available options. You don't have a `launch.json` file until you run the `AL:Go!` command.
 
 ## Tips and tricks
 
 + Use <kbd>Ctrl</kbd>+<kbd>Space</kbd> to activate IntelliSense at any place in the code, which helps you identify possible options.
 + Always use the `.al` extension on new files.
 + Use the built-in [snippets for code](devenv-syntax.md#examples-of-snippets) by typing `t` and choose the desired snippet from the list.
-+ Create objects within the right object ranges, see [Object ranges in Dynamics 365 Business Central](devenv-object-ranges.md).
-+ Build and get inspired by our sample library on [GitHub](https://github.com/Microsoft/bctech).
++ Create objects within the right object ranges. See [Object ranges in Dynamics 365 Business Central](devenv-object-ranges.md).
++ Build and get inspired by the sample library on [GitHub](https://github.com/Microsoft/bctech).
 + Use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and select **AL: Clear credentials cache** to clear the credentials cache if you want to deploy against a different environment.
-+ Use <kbd>F2</kbd> to rename objects, types, etc. Learn more in [Keyboard shortcuts](devenv-keyboard-shortcuts.md#editing-in-visual-studio-code).
-+ The `settings.json` file contains user and workspace settings, these options can be modified to suit your preference. If you want to modify Visual Studio Code editor options and functional behavior settings, see [User and workspace settings](https://code.visualstudio.com/docs/getstarted/settings).
++ Use <kbd>F2</kbd> to rename objects, types, and more. Learn more in [Keyboard shortcuts](devenv-keyboard-shortcuts.md#editing-in-visual-studio-code).
++ The `settings.json` file contains user and workspace settings. Modify these options to suit your preference. To modify Visual Studio Code editor options and functional behavior settings, see [User and workspace settings](https://code.visualstudio.com/docs/getstarted/settings).
 + When no folders are opened, the primary side bar for the Visual Studio Code Explorer has a **Create AL Project** button. Clicking this button invokes the `AL:Go!` command to create a new project.
 
 ## Get started with Copilot templates
 
-With runtime 15.0, you can use the <kbd>Alt</kbd>+<kbd>A</kbd> <kbd>Alt</kbd>+<kbd>P</kbd> shortcut key to create a **Copilot** or a **Copilot test** project. The **Copilot** project template gives you a starting point for your copilot project and includes sample pages and codeunits, which you can use to get started with your project.
+With runtime 15.0, use the <kbd>Alt</kbd>+<kbd>A</kbd> <kbd>Alt</kbd>+<kbd>P</kbd> shortcut key to create a **Copilot** or a **Copilot test** project. The **Copilot** project template gives you a starting point for your copilot project and includes sample pages and codeunits, which you can use to get started with your project.
 
 The **Copilot test** project template furthermore includes codeunits that you can use to test the copilot functionality.
 
@@ -64,7 +64,7 @@ Learn more getting started building copilot functionality in [Get set up with Az
 
 ## JSON file settings
 
-There are three JSON files in the project; the `app.json` file, the `launch.json` file, and the `rad.json`. The files are automatically generated for your project. For more information, see [JSON files](devenv-json-files.md) and [Work with Rapid Application Development (RAD)](devenv-rad-publishing.md).
+The project includes three JSON files: `app.json`, `launch.json`, and `rad.json`. The project automatically generates these files. For more information, see [JSON files](devenv-json-files.md) and [Work with Rapid Application Development (RAD)](devenv-rad-publishing.md).
 
 ## AL configuration settings
 
@@ -72,9 +72,9 @@ Use the AL configuration settings to specify general preferences for working wit
 
 ## Telemetry settings
 
-By default, Visual Studio Code is set up with a telemetry system to make sure that data and errors are sent to Microsoft. If you don't want to send telemetry data, you can change the `telemetry.telemetryLevel` setting to `off`.
+By default, Visual Studio Code is set up with a telemetry system to ensure that data and errors are sent to Microsoft. If you don't want to send telemetry data, change the `telemetry.telemetryLevel` setting to `off`.
 
-To modify the telemetry setting, select <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> in Visual Studio Code and choose **User Settings**, which opens the `settings.json` file, and then add `telemetry.telemetryLevel` and set it to `off` like shown in the following example.
+To modify the telemetry setting, select <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> in Visual Studio Code and choose **User Settings**. This action opens the `settings.json` file. Add `telemetry.telemetryLevel` and set it to `off` as shown in the following example.
  
 ```json
 "telemetry.telemetryLevel": "off"
@@ -86,19 +86,19 @@ To make your extension available to users, the package must be published to a sp
 
 ## Controlling user access to develop and publish extensions
 
-The access to develop and publish extensions is controlled on a user or user group basis by the **EXTEN. MGT. - ADMIN** permission set. It's important that the **EXTEN. MGT. - ADMIN** isn't specified for a specific company, but left blank.
+Control access to develop and publish extensions on a user or user group basis by using the **EXTEN. MGT. - ADMIN** permission set. It's important that you don't specify the **EXTEN. MGT. - ADMIN** permission set for a specific company, but leave it blank.
 
-If you add new permission sets and want to control the access to develop and publish extensions, you must include indirect read and write permissions to the **Published Application** table (read – for downloading symbols, write – for publishing the app) in the permission set.
+If you add new permission sets and want to control access to develop and publish extensions, include indirect read and write permissions to the **Published Application** table (read – for downloading symbols, write – for publishing the app) in the permission set.
 
-To prohibit a user from publishing, just remove the user from the **EXTEN. MGT. - ADMIN** permission set.
+To prohibit a user from publishing, remove the user from the **EXTEN. MGT. - ADMIN** permission set.
 
 ## Switching between different versions of AL
 
-You can switch to a prerelease version of the AL Language extension directly within Visual Studio Code. This is useful if you want to test new features or bug fixes that aren't yet available in the release version. To switch to a prerelease version of the AL Language extension, follow these steps:
+You can switch to a prerelease version of the AL Language extension directly within Visual Studio Code. This option is useful if you want to test new features or bug fixes that aren't yet available in the release version. To switch to a prerelease version of the AL Language extension, follow these steps:
 
 1. Open Visual Studio Code and choose the **Extensions** icon in the Activity Bar on the side of the window.
-2. Search for the **AL Language** extension.
-3. On the **AL Language** extension, choose the **Switch to Pre-Release Version** button and your extension is updated to the prerelease version.
+1. Search for the **AL Language** extension.
+1. On the **AL Language** extension, choose the **Switch to Pre-Release Version** button. Your extension is updated to the prerelease version.
 4. Likewise, to go back choose the **Switch to Release Version** button.
 
 Use preview environments to prepare for the next release. Learn more in [Prepare for major updates with preview environments](../administration/preview-environments.md).

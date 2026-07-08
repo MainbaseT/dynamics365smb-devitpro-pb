@@ -2,7 +2,7 @@
 title: ALTool
 author: SusanneWindfeldPedersen
 description: Simplify AL extension development with ALTool. Validate code, package extensions, and integrate into CI/CD pipelines for seamless deployment.
-ms.date: 05/09/2026
+ms.date: 06/18/2026
 ms.topic: concept-article
 ms.author: solsen
 ms.reviewer: solsen
@@ -34,11 +34,11 @@ The ALTool is available through the Visual Studio Code AL Extension and can be a
 The ALTool executable is located in the `bin` folder in a path equivalent to the following depending on your operating system:
 
 ```shell
-C:\Users\<user>\.vscode\extensions\ms-dynamics-smb.al-17.0.1750311\bin\win32\alc.exe
+C:\Users\<user>\.vscode\extensions\ms-dynamics-smb.al-17.0.1750311\bin\win32\altool.exe
 ```
 
 > [!NOTE]
-> It's recommended that you install the [AL Development Tools package](devenv-al-tool-package.md) as a NuGet package, which provides the `al` alias so you can run ALTool commands without specifying the full path to `alc.exe`. This option is ideal for CI/CD pipelines and automated environments where a full Visual Studio Code installation isn't needed. The examples in the next sections assume you have the tools package installed and can use the `al` alias to run ALTool commands. If you don't have the tools package installed, simply replace `al` with the full path to `alc.exe` in the examples below.
+> Install the [AL Development Tools package](devenv-al-tool-package.md) as a NuGet package. It provides the `al` alias so you can run ALTool commands without specifying the full path to `altool.exe`. This option is ideal for CI/CD pipelines and automated environments where a full Visual Studio Code installation isn't needed. The examples in the next sections assume you have the tools package installed and can use the `al` alias to run ALTool commands. If you don't have the tools package installed, simply replace `al` with the full path to `altool.exe` in the examples.
 
 ## ALTool commands
 
@@ -54,6 +54,7 @@ al help
 | `workspace`                    | Workspace commands for creating, compiling, and mapping multi-project AL workspaces. Learn more in [Workspace commands](#workspace-commands). |
 | `launchmcpserver`              | Launches an AL Model Context Protocol (MCP) server.  |
 | `launchlspserver`              | Launches an AL Language Server Protocol (LSP) server for use by autonomous AI agents and editors. Learn more in [AL LSP](#al-lsp). |
+| `launchprofilingmcpproxy`      | Launches a Performance Profiling MCP proxy that lets an AI agent capture CPU profiles from a slow Business Central session. Learn more in [Performance Profiling MCP proxy](#performance-profiling-mcp-proxy). **NOTE:** This feature is available in preview with a prerelease of runtime 18 and Business Central Server version 29. |
 | `GetPackageManifest`           | Retrieve the manifest from a `.app` file.            |
 | `CreateSymbolPackage`          | Create a symbol-only package from a `.app` file.     |
 | `GetLatestSupportedRuntimeVersion` | Get the latest supported AL runtime version for a platform version. |
@@ -167,20 +168,92 @@ The following options are supported:
 | Option                 | Description |
 |------------------------|-------------|
 | `--packagecachepath <paths>` | Paths to the package cache folders containing the `.app` symbol packages (`System.app`, `BaseApp.app`, etc.). Optional when `al.packageCachePath` is supplied via `--settingspath` or `--workspacefile`. |
-| `--assemblyprobingpaths <paths>` | Paths to probe for dependent .NET assemblies. Required when AL projects reference .NET add-ins in non-standard locations. |
+| `--assemblyprobingpaths <paths>` | Paths to probe for dependent .NET assemblies. Required when AL projects reference .NET add-ins in nonstandard locations. |
 | `--ruleset <path>`     | Path to a ruleset (`.json`) file for AL code analysis. |
-| `--settingspath <path>` | Path to a `settings.json` file (any Visual Studio Code scope—user, workspace, or folder) whose `al.*` keys override CLI defaults at startup. When omitted, ALTool auto-discovers `<rootUri>/.vscode/settings.json` from the LSP `initialize` request, walking ancestors. The LSP `initializationOptions.settingsPath` key from the client takes final precedence. |
+| `--settingspath <path>` | Path to a `settings.json` file (any Visual Studio Code scope - user, workspace, or folder) whose `al.*` keys override CLI defaults at startup. When omitted, ALTool autodiscovers `<rootUri>/.vscode/settings.json` from the LSP `initialize` request, walking ancestors. The LSP `initializationOptions.settingsPath` key from the client takes final precedence. |
 | `--workspacefile <path>` | Path to a Visual Studio Code `.code-workspace` file. Its `folders` extend the projects loaded at startup (merged with the positional `<projects>` argument), and its inline `settings` block contributes `al.*` keys as workspace-level configuration. `--settingspath`, when also supplied, overrides the inline settings. |
 | `--logfile <path>`     | Path to the log file. Defaults to `~/.al-mcp/almcp.log`. |
 | `--loglevel <level>`   | Log level: `Debug`, `Verbose`, `Normal` (default), `Warning`, `Error`. |
 | `--nolog`              | Disable logging entirely. |
 | `-?, -h, --help`       | Show help and usage information. |
 
-Configuration is layered, from least to most authoritative: CLI flags → `--workspacefile` inline settings → `--settingspath` file → auto-discovered `.vscode/settings.json` → LSP `initializationOptions`. The recognized `al.*` keys are `packageCachePath`, `assemblyProbingPaths`, `ruleSetPath`, `enableCodeAnalysis`, and `codeAnalyzers`. JSONC features (`//` comments, trailing commas) are tolerated to match the Visual Studio Code parser.
+Configuration is layered, from least to most authoritative: CLI flags → `--workspacefile` inline settings → `--settingspath` file → autodiscovered `.vscode/settings.json` → LSP `initializationOptions`. The recognized `al.*` keys are `packageCachePath`, `assemblyProbingPaths`, `ruleSetPath`, `enableCodeAnalysis`, and `codeAnalyzers`. JSONC features (`//` comments, trailing commas) are tolerated to match the Visual Studio Code parser.
 
 ALTool validates the supplied input. `--workspacefile` and `--settingspath` paths must exist and parse, and a package cache must be reachable (the `.app` symbol packages are required for AL LSP to provide full language intelligence). When `assemblyProbingPaths` and `ruleSetPath` are both empty, ALTool emits a warning—compilation can fail on projects that reference .NET add-ins or rely on analyzer rulesets.
 
 Diagnostic output is written to the standard log file (`--logfile`) and mirrored to `stderr`, which the LSP host typically surfaces in its own diagnostic stream.
+
+## Performance profiling MCP proxy
+
+[!INCLUDE [2026-releasewave2-later](../includes/2026-releasewave2-later.md)]
+
+The `launchprofilingmcpproxy` command lets an AI agent profile a slow [!INCLUDE [prod_short](includes/prod_short.md)] session. Where `launchmcpserver` and `launchlspserver` operate on a local AL workspace, this command connects *out* to a running Business Central environment and exposes the platform's [scheduled performance profiler](/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview) as Model Context Protocol (MCP) tools. No AL project is loaded. For the end-to-end agent workflow, prerequisites, and permissions, see [Profiling with an AI agent](/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview#profiling-with-an-ai-agent-mcp-server).
+
+ALTool runs as a stdio MCP server that an agent host—for example, Visual Studio Code in agent mode—spawns as a child process. It exposes the following tools that the agent calls on the user's behalf:
+
+- **Schedule profiling** — arms a profiler schedule for a target session's user and activity type, enabled for a bounded window (5 minutes by default, capped at 1 hour). The platform then captures a profile automatically for every matching activity, exactly as if the schedule were created from the **Profiler Schedules** page.
+- **Stop schedule and get profiles** — disables the schedule and returns the captured `.alcpuprofile` files together with a per-activity overview (durations, SQL, and HTTP call counts and times).
+- **Get profile for activity** — returns a single activity's profile for a closer look.
+- **Analyze profiles in folder** — a *local* analysis tool that doesn't connect to Business Central. It lists the `.alcpuprofile` (or `.zip`) files you've placed in the proxy's user profile folder so the agent can read and analyze them with its filesystem tools. Use it for profiles obtained out of band or captured earlier: drop the files into the folder and call the tool.
+
+When an activity profile is captured, the proxy also saves it to a local file so agent hosts that drop embedded binary content can still read it. Auto-captured profiles are grouped in a per-schedule subfolder of the profile folder and are removed once they're past the retention window—cleanup runs at proxy startup and at the start of the next capture (it isn't a background timer). Profiles you want to keep and analyze go in the `user` subfolder, which the proxy never deletes. These files can contain sensitive business data, so handle them securely and in line with your privacy requirements.
+
+The target session is identified per tool call—for example, the agent reads *"profile session 10"* from your prompt—so it isn't a launch option. The connection target and authentication are fixed for the lifetime of the proxy through the options below.
+
+Wire ALTool into your MCP host so it's invoked as:
+
+```shell
+al launchprofilingmcpproxy [options]
+```
+
+The following options are supported:
+
+| Option | Description |
+|--------|-------------|
+| `--environmenttype <type>` | Cloud environment type—`Sandbox` or `Production`—or `OnPrem` for an on-premises server. |
+| `--environmentname <name>` | Cloud environment name (for example, `production`). Cloud only. |
+| `--tenant <tenant>` | Cloud: the Microsoft Entra tenant ID or primary domain (for example, `contoso.onmicrosoft.com`). Multitenant on-premises: the Business Central tenant name. |
+| `--applicationfamily <family>` | Application family for embed apps. Optional. |
+| `--authentication <method>` | `MicrosoftEntraID` (or `AAD`) for cloud, or `Windows` or `UserPassword` for on-premises. Defaults to Microsoft Entra ID. |
+| `--server <url>` | On-premises server URL (for example, `http://localhost`). On-premises only. |
+| `--serverinstance <name>` | On-premises server instance name (for example, `BC`). On-premises only. |
+| `--port <port>` | On-premises port that the MCP service shares with the Business Central API/OData endpoint (for example, `7047`)—not the development endpoint port (`7049`). On-premises only. |
+| `--logfile <path>` | Path to the diagnostics log file. Defaults to `%LOCALAPPDATA%/Microsoft/ALLanguageServer/profilingmcpproxy.log`. |
+| `--loglevel <level>` | Log level: `Debug`, `Verbose`, `Normal` (default), `Warning`, `Error`. |
+| `--nolog` | Disable file logging entirely. |
+| `--profilefolder <path>` | Root folder for locally saved profile files. Defaults to `%TEMP%/bc-profiling`. Auto-captured profiles are stored in per-schedule subfolders; drop your own profiles in the `user` subfolder and analyze them with the **Analyze profiles in folder** tool. |
+| `--profileretentiondays <days>` | How long (in days) auto-captured per-schedule folders are kept before cleanup. Defaults to `1`. Values of `0` or less fall back to `1`. The `user` subfolder is never deleted automatically. |
+| `-?, -h, --help` | Show help and usage information. |
+
+Standard output is reserved for the MCP JSON-RPC stream; all human-readable diagnostics go to `stderr` and to the log file.
+
+### Authentication
+
+The proxy authenticates non-interactively and never opens a browser. For **cloud** connections, it resolves a token in this order: the `BC_ACCESS_TOKEN` environment variable, then a token cached by a prior interactive `altool auth login` sign-in. For **on-premises** hosts, you supply credentials through environment variables. Explicit options take precedence. The proxy caches values read from environment variables in memory only and never writes them to disk.
+
+| Variable | Use |
+|----------|-----|
+| `BC_ACCESS_TOKEN` | A preacquired Microsoft Entra bearer token for cloud connections. The token value is never logged. |
+| `BC_SERVER_USERNAME`, `BC_SERVER_PASSWORD` | Credentials for on-premises `UserPassword` (Basic) authentication. |
+
+On-premises `Windows` authentication uses the current Windows identity and needs no credentials.
+
+For a cloud environment, the simplest option is to sign in interactively once by using the `altool auth login` command. This action caches a token (together with a refresh token) that the proxy reuses and refreshes silently, so you don't need to set `BC_ACCESS_TOKEN`:
+
+```bash
+altool auth login --environmenttype Sandbox --environmentname sandbox --tenant contoso.onmicrosoft.com
+```
+
+Alternatively, for headless or CI/CD hosts where interactive sign-in isn't possible, acquire a `BC_ACCESS_TOKEN` by using the [Azure CLI](/cli/azure/) (after `az login` as a user who has access to the environment), requesting a token for the Business Central API scope:
+
+```bash
+az account get-access-token --scope https://api.businesscentral.dynamics.com/.default --query accessToken --output tsv
+```
+
+This token is short-lived (about one hour), so refresh it when it expires. Because `BC_ACCESS_TOKEN` takes precedence over a cached sign-in, leave it unset when you rely on `altool auth login`.
+
+> [!TIP]  
+> In Visual Studio Code agent mode, the AL extension registers this proxy automatically as the **Business Central Profiling MCP Server** and derives the connection from your `launch.json`, so you don't normally run the command yourself. Sign in by using the **AL: Sign in to Business Central Profiling MCP** command, then ask the agent to profile a session. Learn more in [Profiling with an AI agent](/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview#profiling-with-an-ai-agent-mcp-server).
 
 ## Related information
 
