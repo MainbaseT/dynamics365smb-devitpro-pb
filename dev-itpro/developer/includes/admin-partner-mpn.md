@@ -13,6 +13,6 @@ Once signed up, you will get an MPN ID – your gateway to access all the member
 
 ### Set up your Partner Center account
 
-Once you have joined the Microsoft Partner Network (MPN), you can [set up your Partner Center (PC) account](/partner-center/mpn-create-a-partner-center-account). The Microsoft Partner Center is a generic portal where partners can sell and manage customer subscriptions for Microsoft services, such as Microsoft 365, Azure, Dynamics 365, and others, as well as for some third-party products. For more information, see the [Partner Center documentation](/partner-center/).
+After you join the Microsoft Partner Network (MPN), [set up your Partner Center (PC) account](/partner-center/enroll/partner-center-enroll-overview). The Microsoft Partner Center is a portal where partners can sell and manage customer subscriptions for Microsoft services, such as Microsoft 365, Azure, Dynamics 365, and others, as well as for some third-party products. For more information, see the [Partner Center documentation](/partner-center/).
 
 Your Partner Center account provides you with access to pricing information, tools and services, and enables you to manage admin credentials for your company's work account. Partner Center is also where you can purchase or renew subscriptions to Microsoft Action Packs, create a business profile to receive and manage sales leads from Microsoft, and see if you qualify for co-selling opportunities.
